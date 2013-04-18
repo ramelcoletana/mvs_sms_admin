@@ -1,0 +1,53 @@
+/*sup*/
+sup{
+	color: red;
+}
+#teach_tab{
+	height: 15px;
+	padding-bottom: 10px;
+}
+#teach_tab .new_teach_tab{
+	color: #00ffff;
+	cursor: pointer;
+}
+#teach_tab .new_teach_tab:hover{
+	color: #fff;
+}
+#teach_tab .current_tab_new_teach{
+	color: #fff;
+}
+
+/*NEW SCHOOL HEAD TEACHER*/
+#new_sch_head_wrap{
+	border: 0 none;
+	display: none;
+	padding: 10px;
+}
+#new_sch_head_content sup{
+	color: red;
+}
+#new_sch_head_content h5, #new_sch_head_content h6{
+	text-align: center;
+}
+#new_sch_head_content h6{
+	color: red;
+}
+#new_sch_head_content .div_button_new_sch_head{
+	margin-left: 200px;
+}
+
+/*NEW SCHOOL ADVISER*/
+#new_adviser_wrap{
+	display: none;
+	border: 0 none;
+}
+#new_adviser_content #div_advisory{
+	display: none;
+}
+
+/*NEW SUBJECT TEACHER*/
+#new_sub_teach_wrap{
+	display: none;
+	height: 400px;
+	border: 1px solid red;
+}

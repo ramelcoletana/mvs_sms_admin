@@ -1,0 +1,93 @@
+/*#main .half_w .h_title{
+	background: url(../img/bg_box_head.jpg) repeat-x;
+	color: #bebebe;
+	font-size: 11px;
+	font-weight: normal;
+	height: 22px;
+	padding: 7px 0 0 15px;
+	text-shadow: #0E0E0E 0px 1px 1px;
+}*/
+#main .announcement_wrapper,#main .events_wrapper{
+	border: 1px solid #DCDDE1;
+}
+#main .announcement_wrapper .h_title, #main .events_wrapper .h_title{
+	background: url(../img/bg_box_head.jpg) repeat-x;
+	color: #bebebe;
+	font-size: 11px;
+	font-weight: normal;
+	height: 22px;
+	padding: 7px 0 0 15px;
+	text-shadow: #0E0E0E 0px 1px 1px;
+}
+#main .announcement_wrapper .announcements_box, #main .events_wrapper .events_box{
+	border: 0 none;
+	width: 300px;
+	margin-left: 100px;
+	padding: 10px 5px 30px 20px;
+}
+#main .announcement_wrapper .ann_msg, #main .events_wrapper .event_msg{
+	color: #000;
+	font-size: 13px;
+}
+#main .announcement_wrapper .posted_by,#main .announcement_wrapper .ann_date, 
+#main .events_wrapper .created_by, #main .events_wrapper .event_date_created{
+	color: blue;
+}
+#main .t_latest_ann, #main .t_upcoming_events{
+	margin-left: 100px;
+}
+#main .head_all_ann{
+	margin-left: 270px;
+	font-weight: normal;
+}
+/*#main .view_all_ann_events{
+	margin-left: 100px;
+	cursor: pointer;
+}*/
+#main .view_all_ann_events:hover{
+	color: blue;
+}
+#main .head_new{
+	color: red;
+	text-decoration: blink;
+}
+#main .div_all_announcements{
+	border: 0 none;
+}
+#main #ann_toggle_sign, #main #event_toggle_sign{
+	/*margin-left: 79%;*/
+	float: left;
+	margin-left: 12px;
+	margin-top: -2px;
+	cursor: pointer;
+	border: 0 none;
+	height: 13px;
+	width: 16px;
+	padding: 0 0 3px 2px;
+}
+#main .round_plus{
+	background: url(../img/round_plus.png) no-repeat center left;
+}
+#main .round_minus{
+	background: url(../img/round_minus.png) no-repeat center left;
+}
+
+#main .div_all_ann_wrapper #view_all_ann, #main .div_all_events_wrapper #view_all_events{
+	background: url(../img/bg_box_head.jpg) repeat-x;
+	color: #bebebe;
+	font-size: 11px;
+	font-weight: normal;
+	height: 22px;
+	padding: 7px 0 15px 0px;
+	text-shadow: #0E0E0E 0px 1px 1px;
+}
+#main .div_all_ann_wrapper .span_all_ann_events, #main .div_all_events_wrapper .span_all_ann_events{
+	cursor: pointer;
+	font-size: 10px;
+}
+#main .div_all_announcements .announcement_box{
+	border: 0 none;
+	width: 300px;
+	margin-left: 100px;
+	padding: 10px 5px 20px 20px;
+}
