@@ -17,8 +17,8 @@ include "../DAO/func_admin.php";
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="author" content="Paweł 'kilab' Balicki - kilab.pl" />
-<title>A D M I N &raquo; New Teacher</title>
+<meta name="author" content="programmer_r" />
+<title>MVS &raquo; ADMIN | New Teacher</title>
 <link rel="icon" href="../img/sms.ico"/>
 
 <link rel='stylesheet' type='text/css' href='../themes/base/jquery.ui.all.css'/>
@@ -254,6 +254,7 @@ $(function(){
 
 					<div id="new_adviser_wrap">
 						<div id="new_adviser_content">
+							<div id="div_alert_new_adv"><p class="a_adv_msg"></p></div>
 							<h4>New adviser entry</h5>
 							<!--div class="form_layout_meduim"-->
 								<div id="basic_info_adv" class="form_layout_medium">
@@ -299,20 +300,14 @@ $(function(){
 											<option value="Teacher II">Teacher II</option>
 											<option value="Teacher III">Teacher III</option>
 										</select>
-										<input type='hidden' id='year_sec_id' name='ySecId'/>
-										<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
-										<input type='hidden' id='year_sec_sname' name='ySecSName'/>
-										<input type='hidden' class='adviser_for' name='adviserFor'/>
 										<br/><br/>
 									</form><!-- end new_adv_form -->
 									
 								</div><!-- end basic_info_adv -->
 								<div id = "div_advisory">
+									<h4>Select one for the advisory class.</h4>
 									<table id="tbl_year_sec_to_ass">
 										<thead>
-											<tr>
-												<th colspan=4>Select year and section for the advisory</th>
-											</tr>
 											<tr>
 												<th></th>
 												<th>Year Level</th>
@@ -323,7 +318,13 @@ $(function(){
 										<tbody id="tbdy_year_sec_to_ass"></tbody>
 									</table>
 									<label>Adviser for</label>
-									<input type='text' class="adviser_for" readonly="readonly"/>
+									<form id='new_adv_ext_info'>
+										<input type='text' class="adviser_for" readonly="readonly"/>
+										<input type='hidden' id='year_sec_id' name='ySecId'/>
+										<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
+										<input type='hidden' id='year_sec_sname' name='ySecSName'/>
+									</form>
+									<!-- new_adv_ext_info -->
 								</div><!-- end div_advisory -->
 								<div class='div_button_new_adv'>
 									<button id="btn_proceed_new_adv">Proceed?</button>

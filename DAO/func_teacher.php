@@ -28,8 +28,6 @@ include "db_connect.php";
 			$stmt->bindParam(11,$profilePic);
 			$stmt->bindParam(12,$status);
 			$stmt->execute();
-			//echo $idNum."-".$fullName."-".$address."-".$email."-".$mobile."-".$age."-".$gender."-".$bDate."-".$rank."-".$teacherType."-".$profilePic."-".$status;
-
 			//close connection
 			//echo $sql;
 			$this->closeCon();
@@ -58,6 +56,38 @@ include "db_connect.php";
 				echo "noData";
 			}
 
+			//close connection
+			$this->closeCon();
+		}
+
+		//SAVE NEW ADVISER]
+		function save_new_adv($arrImplode1,$arrImplode2,$teacherId,$teacherType,$profilePic){
+			$this->openCon();
+			$exist = true;
+			$sqlCheck = "SELECT teacher_id FROM t_teachers WHERE teacher_id = ?";
+			$stmt1 = $this->dbCon->prepare($sqlCheck);
+			$stmt1->bindParam(1,$teacherId);
+			$stmt1->execute();
+			$row = $stmt1->fetch();
+				if($row[0] == "" || $row[0] = null){
+					$exist = 0;
+				}
+			
+			if(!$exist){
+				echo "INSERT INTO t_teachers (teacher_id,firstname,middlename,lastname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
+				 VALUES ('$arrImplode1','$teacherType','$profilePic')";
+				$sql1 = "INSERT INTO t_teachers (teacher_id,firstname,middlename,lastname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
+				 VALUES (?,?,?)";
+				 $stmt2 = $this->dbCon->prepare($sql1);
+				 $stmt2->bindParam(1,$arrImplode1);
+				 $stmt2->bindParam(2,$teacherType);
+				 $stmt2->bindParam(3,$profilePic);
+				 //echo  $sql1;
+				 $stmt2->execute();
+				
+
+			}
+			
 			//close connection
 			$this->closeCon();
 		}

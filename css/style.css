@@ -19,7 +19,7 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	text-decoration: underline;
+	text-decoration: none;
 }
 button, .button{
 	background: #F3F3F3;

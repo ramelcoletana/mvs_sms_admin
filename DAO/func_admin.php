@@ -64,7 +64,7 @@ include "db_connect.php";
         //GET DATE TIME LAST LOGIN
         function get_date_last_login($a_username,$a_password){
             $this->openCon();
-            $sql = "SELECT fldLastLogin FROM t_admin_account WHERE username = ? AND password = ?";
+            $sql = "SELECT last_login FROM t_admin_account WHERE username = ? AND password = ?";
             $stmt = $this->dbCon->prepare($sql);
             $stmt->bindParam(1,$a_username);
             $stmt->bindParam(2,$a_password);

@@ -79,10 +79,6 @@ $(function(){
 		hideTabContentNewTeach();
 		$('#new_adviser_wrap').show("blind",1000);
 	});//add class current_tab_new_teach
-	$('#btn_proceed_new_adv').click(function(){
-		enabledSNA();//enabled btn_save_new_adv
-		getYSAdv();//get year and section for advisory
-	});
 	//
 	$('#tbdy_year_sec_to_ass').on("click","tr",function(){
 		var tr_id = this.id;
@@ -98,6 +94,12 @@ $(function(){
 		$('#radio_year_sec_adv'+ysId).attr('checked',true); //it can also be attr('checked','checked');
 	});
 	//saving new adviser
+	$('#btn_proceed_new_adv').click(function(){
+		disabledPNA();
+		enabledSNA();//enabled btn_save_new_adv
+		getYSAdv();//get year and section for advisory
+	});
+	//	
 	$('#btn_save_new_adv').click(function(){
 		disabledPNA();//disabled btn_proceed_new_adv
 		saveNewAdv();//save new adviser
@@ -241,7 +243,6 @@ function valEmailAdv(){//for the new_adv_form
 		return true;
 	}else{
 		return false;
-		$('.vali_emailAdv').focus();
 	}
 }
 
@@ -397,7 +398,6 @@ function hideDivAdvisory(){
 function getYSAdv(){
 	//showing div_advisory
 	showDivAdvisory();
-	clearInput();
 
 	var obj = {"status": 1};
 	$.ajax({
@@ -418,35 +418,41 @@ function getYSAdv(){
 
 //SAVE NEW ADVISER
 function saveNewAdv(){
-	var obj = {'data': JSON.stringify($('#new_adv_form').serializeArray())};
-	var data = $('#new_adv_form').serializeArray();
-	var blank = false;
-	
-	for(var ctr = 0;ctr<data.length;ctr++){
-		if(data[ctr].value==="" || data[ctr].value==="  " || data[ctr].value===null){	
-			blank = true;
+	var data1 = $('#new_adv_form').serializeArray();
+	var data2 = $('#new_adv_ext_info').serializeArray();
+	var obj = {'data1': JSON.stringify($('#new_adv_form').serializeArray()),'data2': JSON.stringify($('#new_adv_ext_info').serializeArray())};
+	var blank1, blank2 = false;
+	for(var ctr = 0;ctr<data1.length;ctr++){
+		if(data1[ctr].value==="" || data1[ctr].value==="  " || data1[ctr].value===null){	
+			blank1 = true;
 			break;
 		}
 	}
-	alert(blank);
-	//if(!reg.test(data[0].value) || data[0].value===""){
-		//alert('hello');
-	//}
-	//alert(data[0].value);
-	var checkEm = valEmailAdv();
-	if(!checkEm){
-		$('#new_adv_email').focus();
-	}
-	
-	$.ajax({
-		type: 'POST',
-		url: 'process/save_new_adv.php',
-		data: obj,
-		success: function(data){
-			//alert(data);
-		},
-		error: function(data){
-			alert('error in saving new adviser = > '+data);
+	for(var ctr = 0;ctr<data2.length;ctr++){
+		if(data2[ctr].value==="" || data2[ctr].value==="  " || data2[ctr].value===null){
+			blank2 = true;
+			break;
 		}
-	});
+	}		
+	var checkEm = valEmailAdv();
+	if((blank1) || (blank2)){
+		$('#div_alert_new_adv').addClass("n_error");
+		$('.a_adv_msg').html("Some information was missing.Check it!!");
+	}else if(!checkEm){
+		$('#new_adv_email').focus();
+		$('#div_alert_new_adv').addClass("n_error");
+		$('.a_sch_msg').html("Please enter a valid email address.");
+	}else{
+		$.ajax({
+			type: 'POST',
+			url: 'process/save_new_adv.php',
+			data: obj,
+			success: function(data){
+				console.log(data);
+			},
+			error: function(data){
+				alert('error in saving new adviser = > '+data);
+			}
+		});
+	}
 }

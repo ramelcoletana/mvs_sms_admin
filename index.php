@@ -18,7 +18,7 @@ include "DAO/func_admin.php";
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="author" content="Ramel Relampagos Coletana" />
-<title>Home &raquo; Merida Vocational School Puerto Bello Annex</title>
+<title>MVS &raquo; ADMIN | Home</title>
 <link rel="icon" href="img/sms.ico"/>
 <!--link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.css'/-->
 <link rel='stylesheet' type='text/css' href='themes/base/jquery.ui.all.css'/>
