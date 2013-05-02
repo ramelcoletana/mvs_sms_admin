@@ -441,13 +441,25 @@ function saveNewAdv(){
 	}else if(!checkEm){
 		$('#new_adv_email').focus();
 		$('#div_alert_new_adv').addClass("n_error");
-		$('.a_sch_msg').html("Please enter a valid email address.");
+		$('.a_adv_msg').html("Please enter a valid email address.");
 	}else{
+		$('#div_alert_new_adv').removeClass("n_error");
 		$.ajax({
 			type: 'POST',
 			url: 'process/save_new_adv.php',
 			data: obj,
 			success: function(data){
+				if (data === "exist") {
+					$('#new_adv_id_num').focus();
+					$('#div_alert_new_adv').addClass("n_error");
+					$('.a_adv_msg').html("ID number already exist.");
+				}else{
+					$('#div_alert_new_adv').removeClass("n_error");
+					enabledPNA();//enabled btn_proceed_new_adv
+					clearInput();//clear all field
+					hideDivAdvisory();//hiding div_advisory
+					disabledSNA();//disabled btn_save_new_adv
+				}
 				console.log(data);
 			},
 			error: function(data){

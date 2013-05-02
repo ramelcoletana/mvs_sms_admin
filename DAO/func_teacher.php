@@ -61,31 +61,63 @@ include "db_connect.php";
 		}
 
 		//SAVE NEW ADVISER]
-		function save_new_adv($arrImplode1,$arrImplode2,$teacherId,$teacherType,$profilePic){
+		function save_new_adv($decoded1,$decoded2,$teacherType,$profilePic){
 			$this->openCon();
+			foreach($decoded1 as $info1){
+				$$info1['name'] = $info1['value'];
+			}
 			$exist = true;
 			$sqlCheck = "SELECT teacher_id FROM t_teachers WHERE teacher_id = ?";
 			$stmt1 = $this->dbCon->prepare($sqlCheck);
-			$stmt1->bindParam(1,$teacherId);
+			$stmt1->bindParam(1,$idNum);
 			$stmt1->execute();
 			$row = $stmt1->fetch();
 				if($row[0] == "" || $row[0] = null){
 					$exist = 0;
 				}
-			
 			if(!$exist){
-				echo "INSERT INTO t_teachers (teacher_id,firstname,middlename,lastname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
-				 VALUES ('$arrImplode1','$teacherType','$profilePic')";
-				$sql1 = "INSERT INTO t_teachers (teacher_id,firstname,middlename,lastname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
-				 VALUES (?,?,?)";
-				 $stmt2 = $this->dbCon->prepare($sql1);
-				 $stmt2->bindParam(1,$arrImplode1);
-				 $stmt2->bindParam(2,$teacherType);
-				 $stmt2->bindParam(3,$profilePic);
-				 //echo  $sql1;
+				$sql = "INSERT INTO t_teachers (teacher_id,fullname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
+				 VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+				foreach($decoded1 as $info1){
+					$$info1['name'] = $info1['value'];
+				}
+				foreach($decoded2 as $info2){
+					$$info2['name'] = $info2['value'];
+				}
+				$fullname = $fName." ".$mName." ".$lName;
+				 $stmt2 = $this->dbCon->prepare($sql);
+				 $stmt2->bindParam(1,$idNum);
+				 $stmt2->bindParam(2,$fullname);
+				 $stmt2->bindParam(3,$address);
+				 $stmt2->bindParam(4,$email);
+				 $stmt2->bindParam(5,$mobile);
+				 $stmt2->bindParam(6,$age);
+				 $stmt2->bindParam(7,$gender);
+				 $stmt2->bindParam(8,$bDate);
+				 $stmt2->bindParam(9,$rank);
+				 $stmt2->bindParam(10,$teacherType);
+				 $stmt2->bindParam(11,$profilePic);
 				 $stmt2->execute();
-				
+				 
+				 $sql = "UPDATE t_year_sections SET avi_status = 0 WHERE year_sec_id = ?";
+				 $stmt = $this->dbCon->prepare($sql);
+				 $stmt->bindParam(1,$ySecId);
+				 $stmt->execute();
+				 
+				 $sql = "INSERT INTO year_sections_assigned (year_sec_id, teacher_id, teacher_fullname, year_level, section_name, year_sec_code)
+						VALUES (?,?,?,?,?,?)";
+				 $stmt = $this->dbCon->prepare($sql);
+				 $stmt->bindParam(1,$ySecId);
+				 $stmt->bindParam(2,$idNum);
+				 $stmt->bindParam(3,$fullname);
+				 $stmt->bindParam(4,$ySecYLevel);
+				 $stmt->bindParam(5,$ySecSName);
+				 $stmt->bindParam(6,$ySecCode);
+				 $stmt->execute();
+				 //Note: unfinished inserting data to table t_year_sections_assigned
 
+			}else{
+				echo "exist";
 			}
 			
 			//close connection
