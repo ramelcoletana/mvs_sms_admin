@@ -151,6 +151,11 @@ $(function(){
 		valiAgeST();
 	});
 	
+	//save new subject teacher
+	$('#btn_save_new_st').click(function(){
+		saveNewST();
+	});
+	
 });
 
 /*F U N C T I O N S*/
@@ -527,9 +532,11 @@ function idNumExist() {
 				    $('#new_st_id_num').focus();
 				    $('#div_alert_new_st').addClass("n_error");
 				    $('.a_st_msg').html("ID number already exist.");
+					exist = true;
 			 }else{
 				    $('#div_alert_new_st').removeClass("n_error");
 				    $('.a_st_msg').html("");
+					exist = false;
 			 }
 			 console.log(data);
 	   },
@@ -592,17 +599,62 @@ function valiEmailST() {
 		}
 }
 function valiMobileST() {
-		var regex = /^[0-9]/;
-		var mobile = $('.vali_mobile_st').val();
+		var regex = /^[0-9]$/;
+		var mobile = $('#new_st_mobile').val();
 		var mL = mobile.length;
 		if (!regex.test(mobile)){
 				var res = mobile.substring(0,mL-1);
-				$('.vali_mobile_st').val(res);
+				$('#new_st_mobile').val(res);
 		}
-		if (mL >3) {
-				var res = mobile.substring(0,3);
-				$('.vali_mobile_st').val(res);
+		if (mL > 11) {
+				var res = mobile.substring(0,11);
+				$('#new_st_mobile').val(res);
+		}
+}
+function valiAgeST() {
+		var regexA = /^[0-9]$/;
+		var ageST = $('#new_st_age').val();
+		console.log(ageST);
+		var aL = ageST.length;
+		if (!regexA.test(ageST)) {
+				var res = ageST.substring(0,aL-1);
+				$('.#new_st_age').val(res);
+		}
+		if (aL > 3) {
+				var res = ageST.substring(0,3);
+				$('#new_st_age').val(res);
+		}
+		
+		//Note: There's a problem in validating mobile number and age
+}
+
+//save new subject teacher
+function saveNewST() {
+		var obj = {"data":JSON.stringify($('#new_st_form').serializeArray())};
+		alert(obj.data)
+		var data = $('#new_st_form').serializeArray();
+		var dataLength = data.length;
+		var blank = false;
+		for (var ctr = 0; ctr<dataLength; ctr++) {
+				//console.log(data[ctr].value);
+				if (data[ctr].value === "" || data[ctr].value === null || data[ctr].value === NaN || data[ctr].value === " ") {
+						blank = true;
+						break;
+				}
+		}
+		if (blank) {
+			$('#div_alert_new_st').addClass("n_error");
+			$('.a_st_msg').html("Do not leave blank.");
+		}else if (exist) {
+			$('#new_st_id_num').focus();
+			$('#div_alert_new_st').addClass("n_error");
+			$('.a_st_msg').html("ID number already exist.");
+		}else if (notValid) {
+			$('#new_st_id_num').focus();
+			$('#div_alert_new_st').addClass("n_error");
+			$('.a_st_msg').html("Some data are invalid. Please check your input.");
+		}else{
 				
-				//Note: unfinished validatin mobile number
 		}
+		console.log("blank: "+blank + "exist :"+exist + "notVAlid "+notValid);
 }
