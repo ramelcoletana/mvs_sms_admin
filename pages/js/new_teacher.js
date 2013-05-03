@@ -1,4 +1,5 @@
 $(function(){
+    genIdNum();
 	clearInput();//reset data
 	disabledSNA();//disabled btn_save_new_adv
 	//date picker
@@ -55,6 +56,7 @@ $(function(){
 	
 	$('#new_sch_head').click(function(){
 		clearInput();//reset data
+		genIdNum();
 		removeClassNewTeachTab();
 		$('#new_sch_head').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
@@ -73,7 +75,8 @@ $(function(){
 
 	//
 	$('#new_adviser').click(function(){
-	clearInput();//reset data
+		clearInput();//reset data
+		genIdNum();
 		removeClassNewTeachTab();
 		$('#new_adviser').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
@@ -113,19 +116,58 @@ $(function(){
 	});
 
 
-	//
+	//NEW SUBJECT TEACHER
 	$('#new_sub_teach').click(function(){
 		clearInput();//reset data
+		genIdNum();
 		removeClassNewTeachTab();
 		$('#new_sub_teach').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
 		$('#new_sub_teach_wrap').show("blind",1000);
 	});//add class current_tab_new_teach
-
+	//id num blur()
+	$('#new_st_id_num').blur(function(){
+		idNumExist();	
+	});
+	$('#new_st_id_num').keyup(function(){
+	   valiIdNumST();
+	});
+	$('#new_st_fname').keyup(function(){
+		valiFNameST();
+	});
+	$('#new_st_mname').keyup(function(){
+		valiMNameST();
+	});
+	$('#new_st_lname').keyup(function(){
+		valiLNameST();
+	});
+	$('#new_st_email').blur(function(){
+		valiEmailST();
+	});
+	$('#new_st_mobile').keyup(function(){
+		valiMobileST();
+	});
+	$('#new_st_age').keyup(function(){
+		valiAgeST();
+	});
 	
 });
 
 /*F U N C T I O N S*/
+//GENERATE AUTO ID NUMBER
+function genIdNum() {
+	$.ajax({
+		type: 'POST',
+		url: 'process/genIdNum.php',
+		success: function(data){
+				var fm = "TID-MVSPB-";
+				$('.id_num').val(fm+data);
+		},
+		error: function(data){
+				console.log("error in generating ir number --..-- "+data);
+		}
+	});
+}
 
 //REMOVE CLASS FOR THE NEW TEACHER TAB
 function removeClassNewTeachTab(){
@@ -444,6 +486,7 @@ function saveNewAdv(){
 		$('.a_adv_msg').html("Please enter a valid email address.");
 	}else{
 		$('#div_alert_new_adv').removeClass("n_error");
+		$('.a_adv_msg').html("");
 		$.ajax({
 			type: 'POST',
 			url: 'process/save_new_adv.php',
@@ -455,6 +498,7 @@ function saveNewAdv(){
 					$('.a_adv_msg').html("ID number already exist.");
 				}else{
 					$('#div_alert_new_adv').removeClass("n_error");
+					$('.a_adv_msg').html("");
 					enabledPNA();//enabled btn_proceed_new_adv
 					clearInput();//clear all field
 					hideDivAdvisory();//hiding div_advisory
@@ -467,4 +511,98 @@ function saveNewAdv(){
 			}
 		});
 	}
+}
+
+//SAVE NEW SUBJECT TEACHER
+var exist = "false";
+
+function idNumExist() {
+	var obj = {"idNum": $('#new_st_id_num').val()};
+	jQuery.ajax({
+	   type: 'POST',
+	   url: 'process/checkNSTidNum.php',
+	   data: obj,
+	   success: function(data){
+			 if (data) {
+				    $('#new_st_id_num').focus();
+				    $('#div_alert_new_st').addClass("n_error");
+				    $('.a_st_msg').html("ID number already exist.");
+			 }else{
+				    $('#div_alert_new_st').removeClass("n_error");
+				    $('.a_st_msg').html("");
+			 }
+			 console.log(data);
+	   },
+	   error: function(data){
+			 console.log("error in checking id number -..- "+data);
+	   }
+	});
+}
+
+//VALIDATION
+var notValid = false;
+function valiIdNumST() {//validate id number
+	   var idNum = $('#new_st_id_num').val();
+	   var regex = /^[a-zA-Z0-9\-]$/;
+	   var iL = idNum.length;
+	   var iLN = idNum.substring(iL-1,iL);
+	   if (!regex.test(iLN)) {
+			 var res = idNum.substring(0,iL-1);
+			 $('#new_st_id_num').val(res);
+	   }
+}
+var regexS = /^[A-Za-z\s]/;
+function valiFNameST() {
+		var fName = $('.vali_fname_st').val();
+		var fL = fName.length;
+		if (!regexS.test(fName)) {
+				var res = fName.substring(0,fL-1);
+				$('.vali_fname_st').val(res);
+		}
+}
+function valiMNameST() {
+		var mname = $('.vali_mname_st').val();
+		var mL = mname.length;
+		if (!regexS.test(mname)) {
+				var res = mname.substring(0,mL-1);
+				$('.vali_mname_st').val(res);
+		}
+}
+function valiLNameST() {
+		var lname = $('.vali_lname_st').val();
+		var lL = lname.length;
+		if (!regexS.test(lname)) {
+				var res = lname.substring(0,lL-1);
+				$('.vali_lname_st').val(res);
+		}
+}
+function valiEmailST() {
+		var regexEm = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		var email = $('.vali_email_st').val();
+		if (!regexEm.test(email)) {
+		    $('#new_st_email').focus();
+			$('#div_alert_new_st').addClass("n_error");
+			$('.a_st_msg').html("Invalid email address. Please enter email address");
+			
+			notValid = true;	
+		}else{
+		    notValid = false;
+			$('#div_alert_new_st').removeClass("n_error");
+			$('.a_st_msg').html("");
+		}
+}
+function valiMobileST() {
+		var regex = /^[0-9]/;
+		var mobile = $('.vali_mobile_st').val();
+		var mL = mobile.length;
+		if (!regex.test(mobile)){
+				var res = mobile.substring(0,mL-1);
+				$('.vali_mobile_st').val(res);
+		}
+		if (mL >3) {
+				var res = mobile.substring(0,3);
+				$('.vali_mobile_st').val(res);
+				
+				//Note: unfinished validatin mobile number
+		}
 }

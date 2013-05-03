@@ -1,10 +1,5 @@
 <?php
 include "../../DAO/func_teacher.php";
-	/*
-	*Hint:
-	*try to search about JSON
-	*try to search about implode
-	*/
 	$data1 = $_POST['data1'];
 	$data2 = $_POST['data2'];
 	$decoded1 = json_decode($data1, true);

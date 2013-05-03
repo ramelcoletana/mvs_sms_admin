@@ -1,6 +1,19 @@
 <?php
 include "db_connect.php";
 	class teacher extends db_connect{
+		
+		//GENRATE ID NUMBER AUTOMATICALLY
+		function genIdNum(){
+				$this->openCon();
+				$sql = "SELECT max(teach_auto_id) FROM t_teachers";
+				$stmt = $this->dbCon->prepare($sql);
+				$stmt -> execute();
+				$row = $stmt->fetch();
+				$max = $row[0] + 1;
+				echo $max;
+				$this->closeCon();
+		}
+		
 		function save_new_sch_head($idNum,$fullName,$address,$email,$mobile,$age,$gender,$bDate,$rank,$profilePic){
 			$this->openCon();
 			$teacherType = "School Head";
@@ -121,6 +134,22 @@ include "db_connect.php";
 			
 			//close connection
 			$this->closeCon();
+		}
+		
+		/*-----------NEW TEACHER------*/
+		function checkNSidNum($idNum){
+			 $this->opencon();
+			 $sql = "SELECT teacher_id FROM t_teachers WHERE teacher_id = ?";
+			 $stmt = $this->dbCon->prepare($sql);
+			 $stmt->bindParam(1,$idNum);
+			 $stmt->execute();
+			 $row = $stmt->fetch();
+			 if($row[0] == "" || $row[0] == null){
+				    echo ""; 
+			 }else{
+				    echo "1";
+			 }
+			 $this->closeCon();
 		}
 	}
 ?>
