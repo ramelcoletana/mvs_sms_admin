@@ -256,88 +256,161 @@ $(function(){
 						<div id="new_adviser_content">
 							<div id="div_alert_new_adv"><p class="a_adv_msg"></p></div>
 							<h4>New adviser entry</h5>
-							<!--div class="form_layout_meduim"-->
-								<div id="basic_info_adv" class="form_layout_medium">
-									<form id='new_adv_form'>
-										<label>ID. Number <sup>*</sup></label>
-										<input type="text" id="new_adv_id_num" name='idNum' class='vali_id_num_adv'/>
-										<br/>
-										<label>First Name <sup>*</sup></label>
-										<input type="text" id="new_adv_fname" name='fName' class='vali_fname_adv'/>
-										<br/>
-										<label>Middle Name <sup>*</sup></label>
-										<input type="text" id="new_adv_mname" name='mName' class='vali_mname_adv'/>
-										<br/>
-										<label>Last Name <sup>*</sup></label>
-										<input type="text" id="new_adv_lname" name='lName' class='vali_lname_adv'/>
-										<br/>
-										<label>Address <sup>*</sup></label>
-										<input type="text" id="new_adv_address" name='address'/>
-										<br/>
-										<label>Email <sup>*</sup></label>
-										<input type="email" id="new_adv_email" name='email' class='vali_emailAdv'/>
-										<br/>
-										<label>Mobile # <sup>*</sup></label>
-										<input type="text" id="new_adv_mobile" class='vali_mobile' name='mobile' title="format : 09+11 digits"/>
-										<br/>
-										<label>Age <sup>*</sup></label>
-										<input type="text" id="new_adv_age" name='age' class='vali_age'/>
-										<br/>
-										<label>Gender <sup>*</sup></label>
-											<select id="new_adv_gender" name='gender'>
-												<option value="Male">Male</option>
-												<option value="Female">Female</option>
-												<option value="Gay">Gay</option>
-												<option value="Lesbian">Lesbian</option>
-											</select>
-										<br/><br/>
-										<label>Date of Birth <sup>*</sup></label>
-										<input type="text" id="new_adv_bdate" class='b_date_datepicker' readonly="readonly" name='bDate'/>
-										<br/>
-										<label>Rank <sup>*</sup></label>
-										<select id="new_adv_rank" name='rank'>
-											<option value="Teacher I">Teacher I</option>
-											<option value="Teacher II">Teacher II</option>
-											<option value="Teacher III">Teacher III</option>
-										</select>
-										<br/><br/>
-									</form><!-- end new_adv_form -->
-									
-								</div><!-- end basic_info_adv -->
-								<div id = "div_advisory">
-									<h4>Select one for the advisory class.</h4>
-									<table id="tbl_year_sec_to_ass">
-										<thead>
-											<tr>
-												<th></th>
-												<th>Year Level</th>
-												<th>Section Name</th>
-												<th>Y.S. Code</th>
-											</tr>
-										</thead>
-										<tbody id="tbdy_year_sec_to_ass"></tbody>
-									</table>
-									<label>Adviser for</label>
-									<form id='new_adv_ext_info'>
-										<input type='text' class="adviser_for" readonly="readonly" name='ySecCode'/>
-										<input type='hidden' id='year_sec_id' name='ySecId'/>
-										<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
-										<input type='hidden' id='year_sec_sname' name='ySecSName'/>
-									</form>
-									<!-- new_adv_ext_info -->
-								</div><!-- end div_advisory -->
-								<div class='div_button_new_adv'>
-									<button id="btn_proceed_new_adv">Proceed?</button>
-									<button id="btn_save_new_adv">Save</button>
-									<button id="btn_cancel_new_adv" >Cancel</button>
-								</div>
-							<!--/div><!-- end form_layout_medium -->
+							<div id="basic_info_adv" class="form_layout_medium">
+							<form id='new_adv_form'>
+								<label>ID. Number <sup>*</sup></label>
+								<input type="text" id="new_adv_id_num" name='idNum' class='vali_id_num_adv'/>
+								<br/>
+								<label>First Name <sup>*</sup></label>
+								<input type="text" id="new_adv_fname" name='fName' class='vali_fname_adv'/>
+								<br/>
+								<label>Middle Name <sup>*</sup></label>
+								<input type="text" id="new_adv_mname" name='mName' class='vali_mname_adv'/>
+								<br/>
+								<label>Last Name <sup>*</sup></label>
+								<input type="text" id="new_adv_lname" name='lName' class='vali_lname_adv'/>
+								<br/>
+								<label>Address <sup>*</sup></label>
+								<input type="text" id="new_adv_address" name='address'/>
+								<br/>
+								<label>Email <sup>*</sup></label>
+								<input type="email" id="new_adv_email" name='email' class='vali_emailAdv'/>
+								<br/>
+								<label>Mobile # <sup>*</sup></label>
+								<input type="text" id="new_adv_mobile" class='vali_mobile' name='mobile' title="format : 09+11 digits"/>
+								<br/>
+								<label>Age <sup>*</sup></label>
+								<input type="text" id="new_adv_age" name='age' class='vali_age'/>
+								<br/>
+								<label>Gender <sup>*</sup></label>
+									<select id="new_adv_gender" name='gender'>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Gay">Gay</option>
+										<option value="Lesbian">Lesbian</option>
+									</select>
+								<br/><br/>
+								<label>Date of Birth <sup>*</sup></label>
+								<input type="text" id="new_adv_bdate" class='b_date_datepicker' readonly="readonly" name='bDate'/>
+								<br/>
+								<label>Rank <sup>*</sup></label>
+								<select id="new_adv_rank" name='rank'>
+									<option value="Teacher I">Teacher I</option>
+									<option value="Teacher II">Teacher II</option>
+									<option value="Teacher III">Teacher III</option>
+								</select>
+								<br/><br/>
+							</form><!-- end new_adv_form -->
+								
+							</div><!-- end basic_info_adv -->
+							<div id = "div_advisory">
+								<h4>Select one for the advisory class.</h4>
+								<table id="tbl_year_sec_to_ass">
+									<thead>
+										<tr>
+											<th></th>
+											<th>Year Level</th>
+											<th>Section Name</th>
+											<th>Y.S. Code</th>
+										</tr>
+									</thead>
+									<tbody id="tbdy_year_sec_to_ass"></tbody>
+								</table>
+								<label>Adviser for</label>
+								<form id='new_adv_ext_info'>
+									<input type='text' class="adviser_for" readonly="readonly" name='ySecCode'/>
+									<input type='hidden' id='year_sec_id' name='ySecId'/>
+									<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
+									<input type='hidden' id='year_sec_sname' name='ySecSName'/>
+								</form>
+								<!-- new_adv_ext_info -->
+							</div><!-- end div_advisory -->
+							<div class='div_button_new_adv'>
+								<button id="btn_proceed_new_adv">Proceed?</button>
+								<button id="btn_save_new_adv">Save</button>
+								<button id="btn_cancel_new_adv" >Cancel</button>
+							</div>
 						</div> <!-- end basic_info_adv-->
 					</div><!-- end new_adviser_wrap -->
 
 					<div id="new_sub_teach_wrap">
 						<div id="new_sub_teach_content">
-
+							<div id="div_alert_new_adv"><p class="a_adv_msg"></p></div>
+							<h4>New adviser entry</h5>
+							<div id="basic_info_adv" class="form_layout_medium">
+							<form id='new_adv_form'>
+								<label>ID. Number <sup>*</sup></label>
+								<input type="text" id="new_adv_id_num" name='idNum' class='vali_id_num_adv'/>
+								<br/>
+								<label>First Name <sup>*</sup></label>
+								<input type="text" id="new_adv_fname" name='fName' class='vali_fname_adv'/>
+								<br/>
+								<label>Middle Name <sup>*</sup></label>
+								<input type="text" id="new_adv_mname" name='mName' class='vali_mname_adv'/>
+								<br/>
+								<label>Last Name <sup>*</sup></label>
+								<input type="text" id="new_adv_lname" name='lName' class='vali_lname_adv'/>
+								<br/>
+								<label>Address <sup>*</sup></label>
+								<input type="text" id="new_adv_address" name='address'/>
+								<br/>
+								<label>Email <sup>*</sup></label>
+								<input type="email" id="new_adv_email" name='email' class='vali_emailAdv'/>
+								<br/>
+								<label>Mobile # <sup>*</sup></label>
+								<input type="text" id="new_adv_mobile" class='vali_mobile' name='mobile' title="format : 09+11 digits"/>
+								<br/>
+								<label>Age <sup>*</sup></label>
+								<input type="text" id="new_adv_age" name='age' class='vali_age'/>
+								<br/>
+								<label>Gender <sup>*</sup></label>
+									<select id="new_adv_gender" name='gender'>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Gay">Gay</option>
+										<option value="Lesbian">Lesbian</option>
+									</select>
+								<br/><br/>
+								<label>Date of Birth <sup>*</sup></label>
+								<input type="text" id="new_adv_bdate" class='b_date_datepicker' readonly="readonly" name='bDate'/>
+								<br/>
+								<label>Rank <sup>*</sup></label>
+								<select id="new_adv_rank" name='rank'>
+									<option value="Teacher I">Teacher I</option>
+									<option value="Teacher II">Teacher II</option>
+									<option value="Teacher III">Teacher III</option>
+								</select>
+								<br/><br/>
+							</form><!-- end new_adv_form -->
+								
+							</div><!-- end basic_info_adv -->
+							<div id = "div_advisory">
+								<h4>Select one for the advisory class.</h4>
+								<table id="tbl_year_sec_to_ass">
+									<thead>
+										<tr>
+											<th></th>
+											<th>Year Level</th>
+											<th>Section Name</th>
+											<th>Y.S. Code</th>
+										</tr>
+									</thead>
+									<tbody id="tbdy_year_sec_to_ass"></tbody>
+								</table>
+								<label>Adviser for</label>
+								<form id='new_adv_ext_info'>
+									<input type='text' class="adviser_for" readonly="readonly" name='ySecCode'/>
+									<input type='hidden' id='year_sec_id' name='ySecId'/>
+									<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
+									<input type='hidden' id='year_sec_sname' name='ySecSName'/>
+								</form>
+								<!-- new_adv_ext_info -->
+							</div><!-- end div_advisory -->
+							<div class='div_button_new_adv'>
+								<button id="btn_proceed_new_adv">Proceed?</button>
+								<button id="btn_save_new_adv">Save</button>
+								<button id="btn_cancel_new_adv" >Cancel</button>
+							</div>
 						</div> <!-- end new_sub_teach_content -->
 					</div> <!-- end new_sub_teach_wrap -->
 

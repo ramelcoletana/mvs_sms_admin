@@ -29,7 +29,6 @@ include "db_connect.php";
 			$stmt->bindParam(12,$status);
 			$stmt->execute();
 			//close connection
-			//echo $sql;
 			$this->closeCon();
 		}
 
@@ -104,7 +103,7 @@ include "db_connect.php";
 				 $stmt->bindParam(1,$ySecId);
 				 $stmt->execute();
 				 
-				 $sql = "INSERT INTO year_sections_assigned (year_sec_id, teacher_id, teacher_fullname, year_level, section_name, year_sec_code)
+				 $sql = "INSERT INTO t_year_sections_assigned (year_sec_id, teacher_id, teacher_fullname, year_level, section_name, year_sec_code)
 						VALUES (?,?,?,?,?,?)";
 				 $stmt = $this->dbCon->prepare($sql);
 				 $stmt->bindParam(1,$ySecId);
