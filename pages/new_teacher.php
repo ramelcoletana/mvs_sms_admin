@@ -319,7 +319,7 @@ $(function(){
 									</table>
 									<label>Adviser for</label>
 									<form id='new_adv_ext_info'>
-										<input type='text' class="adviser_for" readonly="readonly"/>
+										<input type='text' class="adviser_for" readonly="readonly" name='ySecCode'/>
 										<input type='hidden' id='year_sec_id' name='ySecId'/>
 										<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
 										<input type='hidden' id='year_sec_sname' name='ySecSName'/>
