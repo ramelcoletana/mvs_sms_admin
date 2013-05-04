@@ -70,7 +70,7 @@ $(function(){
 				<li class="upp"><a href="#" class="current">Teachers</a>
 					<ul>
 						<li>&#8250; <a href="new_teacher.php" class="current">New Teacher</a></li>
-						<li>&#8250; <a href="">Manage Teachers</a></li>
+						<li>&#8250; <a href="manage_teachers.php">Manage Teachers</a></li>
 					</ul>
 				</li>
 				<li class="upp"><a href="#">Staff</a>
@@ -122,7 +122,7 @@ $(function(){
 				<div class="h_title">&#8250; Teachers</div>
 				<ul id="teachers">
 					<li class="b1"><a class="icon new_teach current" href="new_teacher.php">New Teacher</a></li>
-					<li class="b2"><a class="icon m_teach" href="">Manage Teachers</a></li>
+					<li class="b2"><a class="icon m_teach" href="manage_teachers.php">Manage Teachers</a></li>
 				</ul>
 			</div>
 			<div class="box">
@@ -418,17 +418,24 @@ $(function(){
 	<div class='dialog_save_new_sch_head' title='Saving new school head teacher'>
 		<p>
 		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
-		These data will save permanently. Are you sure?</p><p>
-		<p>You can change the data by clicking no or the close icon.</p>
+		These data will save permanently to database. Are you sure?<br/>
+		You can change the data by clicking no or the close icon.</p>
 	</div>
 	<!-- END dialog_save_new_sch_head -->
 	<div class='dialog_save_new_adv' title='Saving new adviser teacher'>
 		<p>
 		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
-		These data will save permanently. Are you sure?</p><p>
-		<p>You can change the data by clicking no or the close icon.</p>
+		These data will save permanently to database. Are you sure?<br/>
+		You can change the data by clicking no or the close icon.</p>
 	</div>
 	<!-- END dialog_save_new_adv -->
+	<div class='dialog_save_new_st' title='Saving new subject teacher'>
+		<p>
+		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+		These data will save permanently to database. Are you sure?<br/>
+		You can change the data by clicking no or the close icon.</p>
+	</div>
+	<!-- END dialog_save_new_st -->
 </div>
 
 </body>

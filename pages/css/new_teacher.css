@@ -27,3 +27,4 @@ sup { color: red; }
 #new_sub_teach_wrap { display: none; border: 0 none; padding: 10px;}
 #new_sub_teach_content .title_new_entry { text-align: center; font-family: Tahoma, arial, monospace, serif, sans-serif;letter-spacing: 5px; }
 #new_sub_teach_content .div_button_new_adv { margin-left: 335px; }
+.dialog_save_new_st{ display: none; }

@@ -61,7 +61,7 @@ $(function(){
 		removeClassAlert();
 		$('#new_sch_head').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
-		$('#new_sch_head_wrap').show("blind",1000);
+		$('#new_sch_head_wrap').show();
 	});//add class current_tab_new_teach
 	
 	//Save new school head
@@ -70,7 +70,6 @@ $(function(){
 		$('.dialog_save_new_sch_head').dialog({
 				modal: true,
 				resizable: false,
-				position: [800,300],
 				buttons: {
 						Yes: function(){
 								saveNewHeadTeacher();
@@ -97,7 +96,7 @@ $(function(){
 		removeClassAlert();
 		$('#new_adviser').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
-		$('#new_adviser_wrap').show("blind",1000);
+		$('#new_adviser_wrap').show();
 	});//add class current_tab_new_teach
 	//
 	$('#tbdy_year_sec_to_ass').on("click","tr",function(){
@@ -125,7 +124,6 @@ $(function(){
 		  $('.dialog_save_new_adv').dialog({
 				modal: true,
 				resizable: false,
-				postion: [800,300],
 				buttons: {
 						Yes: function(){
 								disabledPNA();//disabled btn_proceed_new_adv
@@ -157,7 +155,7 @@ $(function(){
 		removeClassAlert();
 		$('#new_sub_teach').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
-		$('#new_sub_teach_wrap').show("blind",1000);
+		$('#new_sub_teach_wrap').show();
 	});//add class current_tab_new_teach
 	//id num blur()
 	$('#new_st_id_num').blur(function(){
@@ -187,7 +185,19 @@ $(function(){
 	
 	//save new subject teacher
 	$('#btn_save_new_st').click(function(){
-		saveNewST();
+		$('.dialog_save_new_st').dialog({
+			modal: true,
+			resizable: false,
+			buttons: {
+				Yes: function(){
+					saveNewST();
+					$(this).dialog("close");
+				},
+				No: function(){
+					$(this).dialog("close");
+				}
+			}
+		});
 	});
 	
 });
@@ -492,10 +502,10 @@ function enabledCNA(){//CNA->btn_cancel_new_adv
 }
 //show/hide div_advisory
 function showDivAdvisory(){
-	$('#div_advisory').show('blind',1000);
+	$('#div_advisory').show();
 }
 function hideDivAdvisory(){
-	$('#div_advisory').hide('blind',1000);
+	$('#div_advisory').hide();
 }
 //GET ADVISORY NO ASSIGNED
 function getYSAdv(){
