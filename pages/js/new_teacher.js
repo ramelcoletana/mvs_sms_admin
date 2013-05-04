@@ -58,18 +58,34 @@ $(function(){
 		clearInput();//reset data
 		genIdNum();
 		removeClassNewTeachTab();
+		removeClassAlert();
 		$('#new_sch_head').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
 		$('#new_sch_head_wrap').show("blind",1000);
 	});//add class current_tab_new_teach
 	
 	//Save new school head
+	//var w = window.innerWidth;
 	$('#btn_save_new_sch_head').click(function(){
-		saveNewHeadTeacher();
+		$('.dialog_save_new_sch_head').dialog({
+				modal: true,
+				resizable: false,
+				position: [800,300],
+				buttons: {
+						Yes: function(){
+								saveNewHeadTeacher();
+								$(this).dialog("close");
+						},
+						No: function(){
+								$(this).dialog("close");
+						}
+				}
+		});
 	});
 	//clear form for new school head
 	$('#btn_cancel_new_sch_head').click(function(){
 		clearInput();
+		genIdNum();
 	});
 
 
@@ -78,6 +94,7 @@ $(function(){
 		clearInput();//reset data
 		genIdNum();
 		removeClassNewTeachTab();
+		removeClassAlert();
 		$('#new_adviser').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
 		$('#new_adviser_wrap').show("blind",1000);
@@ -102,15 +119,31 @@ $(function(){
 		enabledSNA();//enabled btn_save_new_adv
 		getYSAdv();//get year and section for advisory
 	});
-	//	
+	//
+	
 	$('#btn_save_new_adv').click(function(){
-		disabledPNA();//disabled btn_proceed_new_adv
-		saveNewAdv();//save new adviser
+		  $('.dialog_save_new_adv').dialog({
+				modal: true,
+				resizable: false,
+				postion: [800,300],
+				buttons: {
+						Yes: function(){
+								disabledPNA();//disabled btn_proceed_new_adv
+								saveNewAdv();//save new adviser
+								$(this).dialog("close");
+						},
+						No: function(){
+								$(this).dialog("close");
+						}
+				}
+		});
+		
 	});
 	//reset input
 	$('#btn_cancel_new_adv').click(function(){
 		enabledPNA();//enabled btn_proceed_new_adv
 		clearInput();//clear all field
+		genIdNum();
 		hideDivAdvisory();//hiding div_advisory
 		disabledSNA();//disabled btn_save_new_adv
 	});
@@ -121,6 +154,7 @@ $(function(){
 		clearInput();//reset data
 		genIdNum();
 		removeClassNewTeachTab();
+		removeClassAlert();
 		$('#new_sub_teach').addClass("current_tab_new_teach");
 		hideTabContentNewTeach();
 		$('#new_sub_teach_wrap').show("blind",1000);
@@ -179,6 +213,35 @@ function removeClassNewTeachTab(){
 	$('#new_sch_head').removeClass("current_tab_new_teach");
 	$('#new_adviser').removeClass("current_tab_new_teach");
 	$('#new_sub_teach').removeClass("current_tab_new_teach");
+}
+
+//CLEAR input 
+function clearInput(){
+	$('#year_sec_id').val("");
+	$('#year_sec_ylevel').val("");
+	$('#year_sec_sname').val("");
+	$('#adviser_for').val("");
+	$("input[type='text']").val("");
+	$("input[type='email']").val("");
+	exist = false;
+	notValid = false;
+}
+function removeClassAlert() {
+		$('#div_alert_new_sch_head').removeClass('n_error');
+		$('#div_alert_new_sch_head').removeClass('n_warning');
+		$('#div_alert_new_sch_head').removeClass('n_ok');
+		
+		$('#div_alert_new_adv').removeClass('n_error');
+		$('#div_alert_new_adv').removeClass('n_warning');
+		$('#div_alert_new_adv').removeClass('n_ok');
+		
+		$('#div_alert_new_st').removeClass('n_error');
+		$('#div_alert_new_st').removeClass('n_warning');
+		$('#div_alert_new_st').removeClass('n_ok');
+		
+		$('.a_sch_msg').html("");
+		$('.a_adv_msg').html("");
+		$('.a_st_msg').html("");
 }
 
 //HIDING TAB CONTENT
@@ -397,6 +460,7 @@ function saveNewHeadTeacher(){
 			 	success: function(data){
 			 		console.log(data);
 					clearInput();
+					genIdNum();
 			 	},
 			 	error: function(data){
 			 		alert("error in saving new school head teacher =>"+data);
@@ -405,17 +469,7 @@ function saveNewHeadTeacher(){
 	}
 }
 //CLEAR NEW SCHOOL HEAD FORM
-//CLEAR input 
-function clearInput(){
-	$('#year_sec_id').val("");
-	$('#year_sec_ylevel').val("");
-	$('#year_sec_sname').val("");
-	$('#adviser_for').val("");
-	$("input[type='text']").val("");
-	$("input[type='email']").val("");
-	exist = false;
-	notValid = false;
-}
+
 /*-----------------NEW ADVISER------------------*/
 //disabled/enabled button btn_proceed_new_adv, btn_save_new_adv, btn_cancel_new_adv
 function disabledPNA(){//PNA->btn_proceed_new_adv
@@ -505,9 +559,11 @@ function saveNewAdv(){
 					$('.a_adv_msg').html("ID number already exist.");
 				}else{
 					$('#div_alert_new_adv').removeClass("n_error");
-					$('.a_adv_msg').html("");
+					$('#div_alert_new_adv').removeClass("n_ok");
+					$('.a_adv_msg').html("Successfully saved.");
 					enabledPNA();//enabled btn_proceed_new_adv
 					clearInput();//clear all field
+					genIdNum();
 					hideDivAdvisory();//hiding div_advisory
 					disabledSNA();//disabled btn_save_new_adv
 				}
@@ -662,6 +718,9 @@ function saveNewST() {
 				data: obj,
 				success: function(data){
 						console.log(data);
+						$('#div_alert_new_st').removeClass("n_error");
+						$('#div_alert_new_st').addClass("n_ok");
+						$('.a_st_msg').html("Successfully saved.");
 						clearInput();
 						genIdNum();
 				},

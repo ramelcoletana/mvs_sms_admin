@@ -189,16 +189,16 @@ $(function(){
 			<div class="full_w">
 				<div id="teacher_wrapper">
 					<div class="h_title" id="teach_tab">
-						<span id="new_sch_head" class='new_teach_tab current_tab_new_teach'>School Head</span>&nbsp;|&nbsp;
-						<span id="new_adviser" class='new_teach_tab'>Adviser</span>&nbsp;|&nbsp;
+						<span id="new_sch_head" class='new_teach_tab current_tab_new_teach'>School Head</span>
+						<span id="new_adviser" class='new_teach_tab'>Adviser</span>
 						<span id="new_sub_teach" class='new_teach_tab'>Subject Teacher</span>
 					</div><!-- end teach_tab -->
 
 					<div id="new_sch_head_wrap">
 						<div id="new_sch_head_content">
 							<div id="div_alert_new_sch_head"><p class="a_sch_msg"></p></div>
-							<h5>New school head teacher of Merida Vocational School Pto. Bello Annex</h5>
-							<h6>Basic Information (all <sup>*</sup> are required)</h6>
+							<h4 class='title_new_entry'>NEW SCHOOL HEAD TEACHER ENTRY</h4>
+							<h6 class='b_info'>Basic Information (all <sup>*</sup> are required)</h6>
 							<div class="form_layout_medium">
 								<form id="new_sch_head_form">
 									<label>ID. Number <sup>*</sup></label>
@@ -247,7 +247,10 @@ $(function(){
 									</select>
 									<br/><br/>
 								</form>
-								<div class='div_button_new_sch_head'><button id="btn_save_new_sch_head">Save</button><button id="btn_cancel_new_sch_head" >Cancel</button></div>
+								<div class='div_button_new_sch_head'>
+										<button id="btn_save_new_sch_head">Save</button>
+										<button id="btn_cancel_new_sch_head" >Cancel</button>
+								</div><!-- end div_button_new_sch_head -->
 							</div>
 						</div> <!-- end new_sch_head_content-->
 					</div> <!-- end new_sch_head_wrap -->
@@ -255,7 +258,8 @@ $(function(){
 					<div id="new_adviser_wrap">
 						<div id="new_adviser_content">
 							<div id="div_alert_new_adv"><p class="a_adv_msg"></p></div>
-							<h4>New adviser entry</h5>
+							<h4 class='title_new_entry'>NEW ADVISER ENTRY</h4>
+							<h6 class='b_info'>Basic Information (all <sup>*</sup> are required)</h6>
 							<div id="basic_info_adv" class="form_layout_medium">
 							<form id='new_adv_form'>
 								<label>ID. Number <sup>*</sup></label>
@@ -304,7 +308,7 @@ $(function(){
 								
 							</div><!-- end basic_info_adv -->
 							<div id = "div_advisory">
-								<h4>Select one for the advisory class.</h4>
+								<h4 class='s_advisory'>&nbsp;&nbsp;&nbsp; Select one for the advisory class.</h4>
 								<table id="tbl_year_sec_to_ass">
 									<thead>
 										<tr>
@@ -316,9 +320,9 @@ $(function(){
 									</thead>
 									<tbody id="tbdy_year_sec_to_ass"></tbody>
 								</table>
-								<label>Adviser for</label>
 								<form id='new_adv_ext_info'>
-									<input type='text' class="adviser_for" readonly="readonly" name='ySecCode'/>
+								    <label>Adviser for</label>
+									<input type='text' class="adviser_for" readonly="readonly" name='ySecCode' style="text-align: center;" />
 									<input type='hidden' id='year_sec_id' name='ySecId'/>
 									<input type='hidden' id='year_sec_ylevel' name='ySecYLevel'/>
 									<input type='hidden' id='year_sec_sname' name='ySecSName'/>
@@ -330,13 +334,15 @@ $(function(){
 								<button id="btn_save_new_adv">Save</button>
 								<button id="btn_cancel_new_adv" >Cancel</button>
 							</div>
+							<br/>
 						</div> <!-- end basic_info_adv-->
 					</div><!-- end new_adviser_wrap -->
 
 					<div id="new_sub_teach_wrap">
 						<div id="new_sub_teach_content">
-							<div id="div_alert_new_st"><p class="a_st_msg"></p></div>
-							<h4 class='title_new_entry'>New subject teacher entry</h5>
+							<div id="div_alert_new_st" ><p class="a_st_msg"></p></div>
+							<h4 class='title_new_entry'>NEW SUBJECT TEACHER ENTRY</h4>
+							<h6 class='b_info'>Basic Information (all <sup>*</sup> are required)</h6>
 							<div id="basic_info_st" class="form_layout_medium">
 							<form id='new_st_form'>
 								<label>ID. Number <sup>*</sup></label>
@@ -389,6 +395,7 @@ $(function(){
 								<button id="btn_save_new_st">Save</button>
 								<button id="btn_cancel_new_st" >Cancel</button>
 							</div>
+							<br/>
 						</div> <!-- end new_sub_teach_content -->
 					</div> <!-- end new_sub_teach_wrap -->
 
@@ -407,6 +414,21 @@ $(function(){
 			<p><a href="http://www.petefreitag.com/cheatsheets/jqueryui-icons/" target="_blank">JQuery icons-set</a> | <a href="http://www.github.com" target="_blank">github.com</a></p>
 		</div>
 	</div> <!-- end footer -->
+	
+	<div class='dialog_save_new_sch_head' title='Saving new school head teacher'>
+		<p>
+		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+		These data will save permanently. Are you sure?</p><p>
+		<p>You can change the data by clicking no or the close icon.</p>
+	</div>
+	<!-- END dialog_save_new_sch_head -->
+	<div class='dialog_save_new_adv' title='Saving new adviser teacher'>
+		<p>
+		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+		These data will save permanently. Are you sure?</p><p>
+		<p>You can change the data by clicking no or the close icon.</p>
+	</div>
+	<!-- END dialog_save_new_adv -->
 </div>
 
 </body>

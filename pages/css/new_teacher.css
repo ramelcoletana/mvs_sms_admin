@@ -1,53 +1,29 @@
 /*sup*/
-sup{
-	color: red;
-}
-#teach_tab{
-	height: 15px;
-	padding-bottom: 10px;
-}
-#teach_tab .new_teach_tab{
-	color: #00ffff;
-	cursor: pointer;
-}
-#teach_tab .new_teach_tab:hover{
-	color: #fff;
-}
-#teach_tab .current_tab_new_teach{
-	color: #fff;
-}
+sup { color: red; }
+.b_info { color: red; text-align: center; }
+
+#teach_tab {	height: 15px; padding-bottom: 10px; }
+#teach_tab .new_teach_tab { color: #fff; cursor: pointer; width: 100px; border: 1px solid #303030; padding: 5px; border-radius: 0px;}
+#teach_tab .new_teach_tab:hover { background: #F3F3F3; color: #000; cursor: pointer; width: 100px; border: 1px solid #fff; padding: 5px; border-radius: 0px; }
+#teach_tab .current_tab_new_teach { background: #F3F3F3; color: #000; cursor: pointer; width: 100px; border: 1px solid #fff; padding: 5px; border-radius: 0px;}
 
 /*NEW SCHOOL HEAD TEACHER*/
-#new_sch_head_wrap{
-	border: 0 none;
-	display: none;
-	padding: 10px;
-}
-#new_sch_head_content sup{
-	color: red;
-}
-#new_sch_head_content h5, #new_sch_head_content h6{
-	text-align: center;
-}
-#new_sch_head_content h6{
-	color: red;
-}
-#new_sch_head_content .div_button_new_sch_head{
-	margin-left: 200px;
-}
+#new_sch_head_wrap {	border: 0 none;	display: none;	padding: 10px; }
+#new_sch_head_content sup { color: red; }
+#new_sch_head_content .title_new_entry { text-align: center; font-family: Tahoma, arial, monospace, serif, sans-serif;letter-spacing: 5px; }
+#new_sch_head_content h6 { color: red; }
+#new_sch_head_content .div_button_new_sch_head { margin-left: 200px; }
+#new_sch_head_content .div_button_new_sch_head { margin-left: 325px; }
+.dialog_save_new_sch_head { display: none; }
 
 /*NEW SCHOOL ADVISER*/
-#new_adviser_wrap{
-	display: none;
-	border: 0 none;
-}
-#new_adviser_content #div_advisory{
-	display: none;
-}
-
+#new_adviser_wrap { display: none; border: 0 none; padding: 10px;}
+#new_adviser_content .title_new_entry { text-align: center; font-family: Tahoma, arial, monospace, serif, sans-serif;letter-spacing: 5px; }
+#new_adviser_content #div_advisory { display: none; }
+#new_adviser_content .div_button_new_adv { margin-left: 237px; }
+#new_adviser_content .s_advisory { color: #575757; }
+.dialog_save_new_adv { display: none; }
 /*NEW SUBJECT TEACHER*/
-#new_sub_teach_wrap{
-	display: none;
-	border: 0 none;
-}
-#new_sub_teach_wrap .title_new_entry{text-align: center; font-size: 20px;}
+#new_sub_teach_wrap { display: none; border: 0 none; padding: 10px;}
+#new_sub_teach_content .title_new_entry { text-align: center; font-family: Tahoma, arial, monospace, serif, sans-serif;letter-spacing: 5px; }
+#new_sub_teach_content .div_button_new_adv { margin-left: 335px; }
