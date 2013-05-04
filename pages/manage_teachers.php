@@ -41,11 +41,11 @@ $(function(){
 	<div id="header">
 		<div id="top">
 			<div class="left">
-				<div style="position: absolute; border: 2px solid #fff; width: 22px; height: 22px; border-radius: 3px; ">
+				<div style="position: absolute; border: 0 none; width: 22px; height: 22px; ">
 					<img src=" <?php if(isset($pic)){ echo "../".$pic; }else{ echo "../img/avatar.gif";} ?>" 
-					style="width: 20px; height: 20px; border: 1px solid #fff; margin: 0 auto;"/>
+					style="width: 20px; height: 20px; border: 0 none; margin: 0 auto; border-radius: 2px;"/>
 				</div>
-				<p>Welcome, <strong id='admin_name'>
+				<p style="margin-left: 33px;">Welcome, <strong id='admin_name'>
 					<?php
 						echo $_SESSION['admin_name'];
 					?>
