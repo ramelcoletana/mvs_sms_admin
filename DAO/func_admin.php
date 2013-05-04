@@ -61,6 +61,26 @@ include "db_connect.php";
             $this->closeCon();
         }
 
+        //GET ADMINISTRATOR'S PROFILE PIC
+        function get_admin_pic($admin_username,$admin_password){
+            $this->openCon();
+            $sql = "SELECT admin_id FROM t_admin_account WHERE username = ? AND password = ?";
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt->bindParam(1,$admin_username);
+            $stmt->bindParam(2,$admin_password);
+            $stmt->execute();
+            $row =$stmt->fetch();
+
+            $sql = "SELECT profile_pic FROM t_admin_infos WHERE admin_id = ?";
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt->bindParam(1,$row[0]);
+            $stmt->execute();
+            $row1 = $stmt->fetch();
+            return $row1[0];
+
+            $this->closeCon();
+        }
+
         //GET DATE TIME LAST LOGIN
         function get_date_last_login($a_username,$a_password){
             $this->openCon();

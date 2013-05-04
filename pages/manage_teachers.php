@@ -8,6 +8,7 @@ include "../DAO/func_admin.php";
 		$name = new func_admin();
 		$n = $name->get_admin_name($_SESSION['admin_username'],$_SESSION['admin_password']);
 		$_SESSION['admin_name'] = $n;
+		$pic = $name->get_admin_pic($_SESSION['admin_username'],$_SESSION['admin_password']);
 	}
 ?>
 
@@ -40,6 +41,10 @@ $(function(){
 	<div id="header">
 		<div id="top">
 			<div class="left">
+				<div style="position: absolute; border: 2px solid #fff; width: 22px; height: 22px; border-radius: 3px; ">
+					<img src=" <?php if(isset($pic)){ echo "../".$pic; }else{ echo "../img/avatar.gif";} ?>" 
+					style="width: 20px; height: 20px; border: 1px solid #fff; margin: 0 auto;"/>
+				</div>
 				<p>Welcome, <strong id='admin_name'>
 					<?php
 						echo $_SESSION['admin_name'];
