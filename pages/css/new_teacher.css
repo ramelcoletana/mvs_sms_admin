@@ -48,5 +48,6 @@ sup{
 /*NEW SUBJECT TEACHER*/
 #new_sub_teach_wrap{
 	display: none;
-	border: 1px solid red;
+	border: 0 none;
 }
+#new_sub_teach_wrap .title_new_entry{text-align: center; font-size: 20px;}

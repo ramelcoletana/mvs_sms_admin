@@ -336,7 +336,7 @@ $(function(){
 					<div id="new_sub_teach_wrap">
 						<div id="new_sub_teach_content">
 							<div id="div_alert_new_st"><p class="a_st_msg"></p></div>
-							<h4>New subject teacher entry</h5>
+							<h4 class='title_new_entry'>New subject teacher entry</h5>
 							<div id="basic_info_st" class="form_layout_medium">
 							<form id='new_st_form'>
 								<label>ID. Number <sup>*</sup></label>

@@ -2,7 +2,7 @@
 include "db_connect.php";
 	class teacher extends db_connect{
 		
-		//GENRATE ID NUMBER AUTOMATICALLY
+		//GENERATE ID NUMBER AUTOMATICALLY
 		function genIdNum(){
 				$this->openCon();
 				$sql = "SELECT max(teach_auto_id) FROM t_teachers";
@@ -136,7 +136,7 @@ include "db_connect.php";
 			$this->closeCon();
 		}
 		
-		/*-----------NEW TEACHER------*/
+		/*-----------NEW SUBJECT TEACHER------*/
 		function checkNSidNum($idNum){
 			 $this->opencon();
 			 $sql = "SELECT teacher_id FROM t_teachers WHERE teacher_id = ?";
@@ -150,6 +150,32 @@ include "db_connect.php";
 				    echo "1";
 			 }
 			 $this->closeCon();
+		}
+		
+		function save_new_st($decoded){
+				$this->openCon();
+				$arrData = array();
+				foreach($decoded as $info){
+						array_push($arrData, $info['value']);
+				}
+				$fullname = $arrData[1]." ".$arrData[2]." ".$arrData[3];
+				$sql = "INSERT INTO t_teachers (teacher_id,fullname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
+				 VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+				$stmt = $this->dbCon->prepare($sql);
+				$stmt->bindParam(1,$arrData[0]);
+				$stmt->bindParam(2,$fullname);
+				$stmt->bindParam(3,$arrData[4]);
+				$stmt->bindParam(4,$arrData[5]);
+				$stmt->bindParam(5,$arrData[6]);
+				$stmt->bindParam(6,$arrData[7]);
+				$stmt->bindParam(7,$arrData[8]);
+				$stmt->bindParam(8,$arrData[9]);
+				$stmt->bindParam(9,$arrData[10]);
+				$stmt->bindParam(10,$arrData[11]);
+				$stmt->bindParam(11,$arrData[12]);
+				$stmt->execute();
+				
+				$this->closeCon();
 		}
 	}
 ?>

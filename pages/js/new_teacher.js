@@ -413,6 +413,8 @@ function clearInput(){
 	$('#adviser_for').val("");
 	$("input[type='text']").val("");
 	$("input[type='email']").val("");
+	exist = false;
+	notValid = false;
 }
 /*-----------------NEW ADVISER------------------*/
 //disabled/enabled button btn_proceed_new_adv, btn_save_new_adv, btn_cancel_new_adv
@@ -538,7 +540,6 @@ function idNumExist() {
 				    $('.a_st_msg').html("");
 					exist = false;
 			 }
-			 console.log(data);
 	   },
 	   error: function(data){
 			 console.log("error in checking id number -..- "+data);
@@ -599,7 +600,7 @@ function valiEmailST() {
 		}
 }
 function valiMobileST() {
-		var regex = /^[0-9]$/;
+		/*var regex = /^[0-9]$/;
 		var mobile = $('#new_st_mobile').val();
 		var mL = mobile.length;
 		if (!regex.test(mobile)){
@@ -609,21 +610,23 @@ function valiMobileST() {
 		if (mL > 11) {
 				var res = mobile.substring(0,11);
 				$('#new_st_mobile').val(res);
-		}
+		}*/
 }
 function valiAgeST() {
-		var regexA = /^[0-9]$/;
+		
+		/*var regexA = /^[0-9]$/;
 		var ageST = $('#new_st_age').val();
 		console.log(ageST);
 		var aL = ageST.length;
-		if (!regexA.test(ageST)) {
+		var aLN = ageST.substring(aL-1,aL);
+		if (!regexA.test(aLN)) {
 				var res = ageST.substring(0,aL-1);
 				$('.#new_st_age').val(res);
 		}
 		if (aL > 3) {
 				var res = ageST.substring(0,3);
 				$('#new_st_age').val(res);
-		}
+		}*/
 		
 		//Note: There's a problem in validating mobile number and age
 }
@@ -631,7 +634,6 @@ function valiAgeST() {
 //save new subject teacher
 function saveNewST() {
 		var obj = {"data":JSON.stringify($('#new_st_form').serializeArray())};
-		alert(obj.data)
 		var data = $('#new_st_form').serializeArray();
 		var dataLength = data.length;
 		var blank = false;
@@ -654,7 +656,18 @@ function saveNewST() {
 			$('#div_alert_new_st').addClass("n_error");
 			$('.a_st_msg').html("Some data are invalid. Please check your input.");
 		}else{
-				
+		    $.ajax({
+				type: 'POST',
+				url: 'process/save_new_st.php',
+				data: obj,
+				success: function(data){
+						console.log(data);
+						clearInput();
+						genIdNum();
+				},
+				error: function(data){
+						console.log("error in saving new subject teacher '_-_' "+data);
+				}
+			});
 		}
-		console.log("blank: "+blank + "exist :"+exist + "notVAlid "+notValid);
 }
