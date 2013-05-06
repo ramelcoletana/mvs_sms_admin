@@ -79,14 +79,15 @@ include "db_connect.php";
 				$$info1['name'] = $info1['value'];
 			}
 			$exist = true;
-			$sqlCheck = "SELECT teacher_id FROM t_teachers WHERE teacher_id = ?";
+			$sqlCheck = "SELECT teach_auto_id,teacher_id FROM t_teachers WHERE teacher_id = ?";
 			$stmt1 = $this->dbCon->prepare($sqlCheck);
 			$stmt1->bindParam(1,$idNum);
 			$stmt1->execute();
 			$row = $stmt1->fetch();
-				if($row[0] == "" || $row[0] = null){
+				if($row[1] == "" || $row[1] = null){
 					$exist = 0;
 				}
+
 			if(!$exist){
 				$sql = "INSERT INTO t_teachers (teacher_id,fullname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
 				 VALUES (?,?,?,?,?,?,?,?,?,?,?)";
@@ -115,18 +116,24 @@ include "db_connect.php";
 				 $stmt = $this->dbCon->prepare($sql);
 				 $stmt->bindParam(1,$ySecId);
 				 $stmt->execute();
-				 
-				 $sql = "INSERT INTO t_year_sections_assigned (year_sec_id, teacher_id, teacher_fullname, year_level, section_name, year_sec_code)
+
+                 $sql = "SELECT teach_auto_id FROM t_teachers WHERE teacher_id = ?";
+                 $stmt = $this->dbCon->prepare($sql);
+                 $stmt -> bindParam(1,$idNum);
+                 $stmt->execute();
+                 $row = $stmt->fetch();
+                 $teach_auto_id = $row[0];
+
+				 $sql = "INSERT INTO t_year_sections_assigned (year_sec_id, teach_auto_id, teacher_fullname, year_level, section_name, year_sec_code)
 						VALUES (?,?,?,?,?,?)";
 				 $stmt = $this->dbCon->prepare($sql);
 				 $stmt->bindParam(1,$ySecId);
-				 $stmt->bindParam(2,$idNum);
+				 $stmt->bindParam(2,$teach_auto_id);
 				 $stmt->bindParam(3,$fullname);
 				 $stmt->bindParam(4,$ySecYLevel);
 				 $stmt->bindParam(5,$ySecSName);
 				 $stmt->bindParam(6,$ySecCode);
 				 $stmt->execute();
-				 //Note: unfinished inserting data to table t_year_sections_assigned
 
 			}else{
 				echo "exist";
@@ -182,7 +189,12 @@ include "db_connect.php";
 
         function view_teacher_first_page($search_input_val, $teacher_type, $page_limit){
             $this->openCon();
-            $page = 1;
+            $current_page = 1;
+            $start_page = ($current_page - 1) * $page_limit;
+
+            echo $start_page;
+
+            $sql = "SELECT teacher_auto_id, teacher_id, ";
             
 
             $this->closeCon();

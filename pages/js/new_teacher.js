@@ -563,6 +563,7 @@ function saveNewAdv(){
 			url: 'process/save_new_adv.php',
 			data: obj,
 			success: function(data){
+                //console.log(data);
 				if (data === "exist") {
 					$('#new_adv_id_num').focus();
 					$('#div_alert_new_adv').addClass("n_error");
@@ -577,7 +578,7 @@ function saveNewAdv(){
 					hideDivAdvisory();//hiding div_advisory
 					disabledSNA();//disabled btn_save_new_adv
 				}
-				console.log(data);
+
 			},
 			error: function(data){
 				alert('error in saving new adviser = > '+data);
