@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/DAO/func_teacher.php" line="253" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="17f5dc60-47e4-447e-bf44-21b61cec793e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/js/manage_teachers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/process/pagination_system.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/func_teacher.php" afterPath="$PROJECT_DIR$/DAO/func_teacher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/css/manage_teachers.css" afterPath="$PROJECT_DIR$/pages/css/manage_teachers.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/js/manage_teachers.js" afterPath="$PROJECT_DIR$/pages/js/manage_teachers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/manage_teachers.php" afterPath="$PROJECT_DIR$/pages/manage_teachers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/template.php" afterPath="$PROJECT_DIR$/pages/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/process/view_teacher_first_page.php" afterPath="$PROJECT_DIR$/pages/process/view_teacher_first_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mvs_sms_admin.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367805255063" ignored="false" />
+    <file path="/Dummy.txt" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367822925538" ignored="false" />
     <file path="/index.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367802866767" ignored="false" />
     <file path="$PROJECT_DIR$/../greendough/index1.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367805649814" ignored="false" />
     <file path="$PROJECT_DIR$/../greendough/css/index1.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367805616006" ignored="false" />
@@ -20,12 +23,16 @@
     <file path="/template.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367807575291" ignored="false" />
     <file path="/manage.html" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367807793684" ignored="false" />
     <file path="/manage_teachers.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367809196878" ignored="false" />
-    <file path="/manage_teachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367812868359" ignored="false" />
-    <file path="/manage_teachers.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367813763538" ignored="false" />
+    <file path="/manage_teachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367833232555" ignored="false" />
+    <file path="/manage_teachers.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367830682978" ignored="false" />
     <file path="$PROJECT_DIR$/../pagination/js/vpb_pagination.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367812939556" ignored="false" />
     <file path="/vpb_pagination.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367812621849" ignored="false" />
     <file path="/viewTeachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367813804254" ignored="false" />
-    <file path="/func_teacher.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367814037767" ignored="false" />
+    <file path="/func_teacher.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367833149212" ignored="false" />
+    <file path="/paginate.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367825257218" ignored="false" />
+    <file path="/pagination_first_page.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367827115661" ignored="false" />
+    <file path="$PROJECT_DIR$/../pagination/content_displayer.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367827450581" ignored="false" />
+    <file path="/view_teachers_paginate.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367830308611" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +61,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
+      <file leaf-file-name="view_teachers_paginate.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/process/view_teachers_paginate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="264" column="21" selection-start="5950" selection-end="6108" vertical-scroll-proportion="-10.928572">
+            <state line="9" column="45" selection-start="247" selection-end="247" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_teachers.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="264" column="21" selection-start="5950" selection-end="6108" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_teachers.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="273" column="85" selection-start="10044" selection-end="10044" vertical-scroll-proportion="-56.625">
+            <state line="217" column="78" selection-start="7787" selection-end="7787" vertical-scroll-proportion="0.5930807">
               <folding>
                 <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#3;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#3;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#3;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -83,30 +94,29 @@
       <file leaf-file-name="manage_teachers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/js/manage_teachers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="51" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#160#0" expanded="false" />
-              </folding>
+            <state line="99" column="18" selection-start="2506" selection-end="2523" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_teacher_first_page.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/process/view_teacher_first_page.php">
+      <file leaf-file-name="pagination_system.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.75">
-              <folding>
-                <element signature="e#6#164#0" expanded="true" />
-              </folding>
+            <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="-8.75">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="func_teacher.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="func_teacher.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="12" selection-start="5825" selection-end="5825" vertical-scroll-proportion="0.7929448">
-              <folding />
+            <state line="269" column="29" selection-start="9801" selection-end="9801" vertical-scroll-proportion="-10.833333">
+              <folding>
+                <marker date="1367833200779" expanded="true" signature="7174:7200" placeholder="..." />
+                <marker date="1367833200779" expanded="true" signature="8718:8744" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,20 +145,23 @@
         <option value="$PROJECT_DIR$/pages/manage.html" />
         <option value="$PROJECT_DIR$/pages/template.php" />
         <option value="$PROJECT_DIR$/pages/css/manage_teachers.css" />
-        <option value="$PROJECT_DIR$/pages/manage_teachers.php" />
-        <option value="$PROJECT_DIR$/pages/js/manage_teachers.js" />
         <option value="$PROJECT_DIR$/pages/process/viewTeachers.php" />
+        <option value="$PROJECT_DIR$/pages/js/new_teacher.js" />
         <option value="$PROJECT_DIR$/pages/process/view_teacher_first_page.php" />
+        <option value="$PROJECT_DIR$/pages/process/paginate.php" />
+        <option value="$PROJECT_DIR$/pages/process/pagination_first_page.php" />
+        <option value="$PROJECT_DIR$/pages/process/view_teachers_paginate.php" />
+        <option value="$PROJECT_DIR$/pages/js/manage_teachers.js" />
         <option value="$PROJECT_DIR$/DAO/func_teacher.php" />
+        <option value="$PROJECT_DIR$/pages/manage_teachers.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="24" />
-    <option name="width" value="1420" />
-    <option name="height" value="860" />
+    <option name="y" value="52" />
+    <option name="width" value="1440" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -176,6 +189,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,13 +256,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../greendough" />
+    <property name="options.lastSelected" value="appearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pagination" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -260,7 +277,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -277,26 +294,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="24" width="1420" height="860" extended-state="0" />
+    <frame x="0" y="52" width="1440" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15277778" sideWeight="0.6713881" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15755396" sideWeight="0.67238915" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -357,19 +374,83 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/js/manage_teachers.js</url>
+          <line>75</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/template.php">
+    <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="0" selection-start="6686" selection-end="6686" vertical-scroll-proportion="0.39906102">
+        <state line="273" column="85" selection-start="10044" selection-end="10044" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/js/manage_teachers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="51" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/process/view_teacher_first_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="0" selection-start="5813" selection-end="5813" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1367833200779" expanded="true" signature="7174:7200" placeholder="..." />
+            <marker date="1367833200779" expanded="true" signature="8718:8744" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="0" selection-start="6686" selection-end="6686" vertical-scroll-proportion="0.39906102" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="93" selection-start="595" selection-end="595" vertical-scroll-proportion="-4.1408453">
+        <state line="12" column="93" selection-start="595" selection-end="595" vertical-scroll-proportion="-4.1408453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/db_connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="423" selection-end="423" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/js/new_teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="565" column="18" selection-start="15404" selection-end="15404" vertical-scroll-proportion="0.44790047" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="264" column="21" selection-start="5950" selection-end="6108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/process/view_teacher_first_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="43" selection-start="247" selection-end="247" vertical-scroll-proportion="0.09677419">
           <folding />
         </state>
       </provider>
@@ -381,57 +462,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/db_connect.php">
+    <entry file="file://$PROJECT_DIR$/pages/process/view_teachers_paginate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="423" selection-end="423" vertical-scroll-proportion="-11.25">
+        <state line="9" column="45" selection-start="247" selection-end="247" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="21" selection-start="5950" selection-end="6108" vertical-scroll-proportion="-10.928572">
+        <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="-8.75">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="85" selection-start="10044" selection-end="10044" vertical-scroll-proportion="-56.625">
-          <folding>
-            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#3;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#3;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#3;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/js/manage_teachers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="51" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/process/view_teacher_first_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.75">
-          <folding>
-            <element signature="e#6#164#0" expanded="true" />
-          </folding>
+        <state line="99" column="18" selection-start="2506" selection-end="2523" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="12" selection-start="5825" selection-end="5825" vertical-scroll-proportion="0.7929448">
-          <folding />
+        <state line="269" column="29" selection-start="9801" selection-end="9801" vertical-scroll-proportion="-10.833333">
+          <folding>
+            <marker date="1367833200779" expanded="true" signature="7174:7200" placeholder="..." />
+            <marker date="1367833200779" expanded="true" signature="8718:8744" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="78" selection-start="7787" selection-end="7787" vertical-scroll-proportion="0.5930807">
+          <folding>
+            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

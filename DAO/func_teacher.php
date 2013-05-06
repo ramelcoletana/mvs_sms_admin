@@ -192,12 +192,183 @@ include "db_connect.php";
             $current_page = 1;
             $start_page = ($current_page - 1) * $page_limit;
 
-            echo $start_page;
-
-            $sql = "SELECT teacher_auto_id, teacher_id, ";
+            $sql = "SELECT teach_auto_id, profile_pic, teacher_id, fullname, teacher_type FROM t_teachers
+                   WHERE teacher_type = '$teacher_type' AND (teacher_id LIKE '$search_input_val'
+                  OR fullname LIKE '$search_input_val')  LIMIT $start_page , $page_limit";
+            //echo $sql;
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt->execute();
+            $profile_pic = "";
+            while($row = $stmt->fetch()){
+                $profile_pic = $row[1];
+                if($profile_pic == "" || $profile_pic == null){
+                    $profile_pic = "profile_pic_teachers/avatar.gif";
+                }
+                echo "<tr>";
+                echo "<td><input type=checkbox id='checkbox'.$row[0] /></td>";
+                echo "<td><span class='table-icon edit' title='Edit' id='edit'.$row[0]></span></td>";
+                echo "<td><span class='table-icon delete' title='Delete' id='delete'.$row[0]></span></td>";
+                echo "<td><img src='$profile_pic' style='width: 20px ;height: 20px;'/></td>";
+                echo "<td>".$row[2]."</td>";
+                echo "<td>".$row[3]."</td>";
+                echo "<td>".$row[4]."</td>";
+                echo "</tr>";
+            }
             
 
             $this->closeCon();
+        }
+
+        function view_teachers_paginate($search_input_val, $teacher_type, $page_limit, $page){
+            $this->openCon();
+            $current_page = $page;
+            echo $current_page;
+            $start_page = ($current_page - 1 ) * $page_limit;
+
+            $sql = "SELECT teach_auto_id, profile_pic, teacher_id, fullname, teacher_type FROM t_teachers
+                    WHERE teacher_type = '$teacher_type' AND (teacher_id LIKE '$search_input_val'
+                    OR fullname LIKE '$search_input_val')  LIMIT $start_page , $page_limit ";
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt->execute();
+            $profile_pic = "";
+            while($row = $stmt->fetch()){
+                $profile_pic = $row[1];
+                if($profile_pic == "" || $profile_pic == null){
+                    $profile_pic = "profile_pic_teachers/avatar.gif";
+                }
+                echo "<tr>";
+                echo "<td><input type=checkbox id='checkbox'.$row[0] /></td>";
+                echo "<td><span class='table-icon edit' title='Edit' id='edit'.$row[0]></span></td>";
+                echo "<td><span class='table-icon delete' title='Delete' id='delete'.$row[0]></span></td>";
+                echo "<td><img src='$profile_pic' style='width: 20px ;height: 20px;'/></td>";
+                echo "<td>".$row[2]."</td>";
+                echo "<td>".$row[3]."</td>";
+                echo "<td>".$row[4]."</td>";
+                echo "</tr>";
+            }
+
+            $this->closeCon();
+        }
+
+        //PAGINATE FIRST PAGE
+        function pagination_system($current_page, $input_search_val, $teacher_type, $page_limit){
+            $this->openCon();
+
+            $sql = "SELECT COUNT(*) FROM t_teachers WHERE (teacher_id LIKE '$input_search_val' OR fullname LIKE '$input_search_val') AND teacher_type = ? ";
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt->bindParam(1,$teacher_type);
+            $stmt->execute();
+            $row = $stmt->fetch();
+
+            $total_pages = $row[0];
+            $pagination_stages = 2;
+            if($current_page == 0){$current_page == 1;}
+            $previous_page = $current_page -1;
+            $next_page = $current_page + 1;
+            $last_page = ceil($total_pages/$page_limit);
+            $last_paged = $last_page -1;
+            $pagination = '';
+
+            if($last_page > 1){
+                $pagination .= "<div>";
+
+                //Previous page
+                if($current_page > 1)
+                {
+                    $pagination .= "<a href='javascript:void(0)' onclick='pagination_system(\"$previous_page\");'>Prev</a> ";
+                }
+                else
+                {
+                    $pagination .= "<span class='disabled'>Prev</span>";
+                }
+                //Pages
+                if($last_page < 7 + ($pagination_stages * 2))
+                { //Not enough pages to breaking it up
+                    for($page_counter = 1; $page_counter <= $last_page; $page_counter++)
+                    {
+                        if($page_counter == $current_page)
+                        {
+                            $pagination .= "<span class='current'>$page_counter</span>";
+                        }
+                        else
+                        {
+                            $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$page_counter\");'>$page_counter</a>";
+                        }
+                    }
+                }
+                elseif( $last_page > 5 + ($pagination_stages *2) )
+                { // This hides few pages when the displayed pages are much
+                    //Beginning only hide later pages
+                    if( $current_page< 1 + ($pagination_stages * 2))
+                    {
+                        for($page_counter = 1; $page_counter < 4 + ($pagination_stages * 2); $page_counter++)
+                        {
+                            if( $page_counter == $current_page ){
+                                $pagination .= "<span class='current'>$page_counter</span>";
+                            }else{
+                                $pagination.= "<a href='javascript:void(0);' onclick='pagination_system(\"$page_counter\");'>$page_counter</a>";
+                            }
+                        }
+                        $pagination .= "...";
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$last_paged\");'>$last_paged</a>";
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$last_page\");'>$last_page</a>";
+                    }
+                    //Middle hide some front and some back
+                    elseif( $last_page - ($pagination_stages * 2) > $current_page && $current_page > ($pagination_stages * 2) )
+                    {
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"1\");'>1</a>";
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"2\");'>2</a>";
+                        $pagination .= "...";
+
+                        for( $page_counter = $current_page - ($pagination_stages * 2); $page_counter <= $current_page + $pagination_stages; $page_counter++ )
+                        {
+                            if($page_counter == $current_page)
+                            {
+                                $pagination .= "<span class='current'>$page_counter</span>";
+                            }
+                            else
+                            {
+                                $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$page_counter\");'>$page_counter</a>";
+                            }
+                        }
+                        $pagination .= "...";
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$last_paged\");'>$last_paged</a>";
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$last_page\");'>$last_page</a>";
+                    }
+                    //End only hide early pages
+                    else{
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"1\");'>1</a>";
+                        $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"2\");'>2</a>";
+                        $pagination .= "...";
+                        for( $page_counter = $last_page - (2 + ($pagination_stages * 2 ) ); $page_counter <= $last_page; $page_counter++ ){
+                            if($page_counter == $current_page){
+                                $pagination .= "<span class='current'>$page_counter</span>";
+                            }else {
+                                $pagination.= "<a href='javascript:void(0);' onclick='pagination_system(\"$page_counter\");'>$page_counter</a>";
+                            }
+                        }
+                    }//end else only hide early pagess
+                }
+                //Next Page
+                if( $current_page < $page_counter -1 )
+                {
+                    $pagination .= "<a href='javascript:void(0);' onclick='pagination_system(\"$next_page\");'>Next</a>";
+                }else
+                {
+                    $pagination .= "<span class='disabled'>Next</span>";
+                }
+                $pagination .= "<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page ".$current_page." of ".$last_page."</span></span></div>";
+
+                /*Note: there is a problem in paginating data
+                 *
+                 */
+            echo $pagination;
+            }
+
+
+
+            $this->closeCon();
+
         }
 	}
 ?>

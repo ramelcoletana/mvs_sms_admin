@@ -201,7 +201,7 @@ $(function(){
 						<option value="Subject Teacher">Subject Teacher</option>
 					</select>
 					<label>Page Limit</label>
-					<input type="text" id="page_limit" class="page_limit" placeholder="0" value ="0"; />
+					<input type="text" id="page_limit" class="page_limit" placeholder="0" value ="1"; />
 				</div>
 				<div class='sep'></div>
 				<div class='div_table_teachers'>
@@ -215,52 +215,8 @@ $(function(){
 								<th>Type</th>
 							</tr>
 						</thead>
-						<tbody style="text-align: center;">
-							<tr>
-								<td><input type='checkbox'/></td>
-								<td><span class="table-icon edit" title="Edit"></span></td>
-								<td><span class="table-icon delete" title="Delete"></span></td>
-								<td><img src='../img/sms.ico' style="width: 20px ;height: 20px;"/></td>
-								<td>00000000</td>
-								<td>Ramel Relampagos Coletana</td>
-								<td>School Head</td>
-							</tr>
-							<tr>
-								<td><input type='checkbox'/></td>
-								<td><span class="table-icon edit" title="Edit"></span></td>
-								<td><span class="table-icon delete" title="Delete"></span></td>
-								<td><img src='../img/sms.ico' style="width: 20px ;height: 20px;"/></td>
-								<td>00000000</td>
-								<td>Ramel Relampagos Coletana</td>
-								<td>School Head</td>
-							</tr>
-							<tr>
-								<td><input type='checkbox'/></td>
-								<td><span class="table-icon edit" title="Edit"></span></td>
-								<td><span class="table-icon delete" title="Delete"></span></td>
-								<td><img src='../img/sms.ico' style="width: 20px ;height: 20px;"/></td>
-								<td>00000000</td>
-								<td>Ramel Relampagos Coletana</td>
-								<td>School Head</td>
-							</tr>
-							<tr>
-								<td><input type='checkbox'/></td>
-								<td><span class="table-icon edit" title="Edit"></span></td>
-								<td><span class="table-icon delete" title="Delete"></span></td>
-								<td><img src='../img/sms.ico' style="width: 20px ;height: 20px;"/></td>
-								<td>00000000</td>
-								<td>Ramel Relampagos Coletana</td>
-								<td>School Head</td>
-							</tr>
-							<tr>
-								<td><input type='checkbox'/></td>
-								<td><span class="table-icon edit" title="Edit"></span></td>
-								<td><span class="table-icon delete" title="Delete"></span></td>
-								<td><img src='../img/sms.ico' style="width: 20px ;height: 20px;"/></td>
-								<td>00000000</td>
-								<td>Ramel Relampagos Coletana</td>
-								<td>School Head</td>
-							</tr>
+						<tbody id='tbdy_teachers' style="text-align: center;" >
+							<!-- content from database here.. -->
 						</tbody>
 						<tfoot style="text-align: center;">
 							<tr>
