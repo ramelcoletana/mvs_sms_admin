@@ -177,5 +177,15 @@ include "db_connect.php";
 				
 				$this->closeCon();
 		}
+
+        //MANAGE TEACHERS
+
+        function view_teacher_first_page($search_input_val, $teacher_type, $page_limit){
+            $this->openCon();
+            $page = 1;
+            
+
+            $this->closeCon();
+        }
 	}
 ?>

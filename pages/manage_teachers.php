@@ -28,6 +28,7 @@ include "../DAO/func_admin.php";
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="../js-ui/jquery-ui-darkhive.js"></script>
 <script type="text/javascript" src="../js/current_date.js"></script>
+    <script type="text/javascript" src="js/manage_teachers.js"></script>
 <script type="text/javascript">
 $(function(){
 	$(".box .h_title").not(this).next("ul").hide("normal");
@@ -191,7 +192,7 @@ $(function(){
 			<div class="full_w">
 			<div class='m_teachers_content'>
 				<div class='div_search_teachers'>
-					<input type='text' id='input_search'/>
+					<input type='text' id='input_search' placeholder="Search input"/>
 					<button class='btn_search' id='btn_search'>Go</button>
 					<label>Teacher type:</label>
 					<select id="teacher_type">
@@ -200,7 +201,7 @@ $(function(){
 						<option value="Subject Teacher">Subject Teacher</option>
 					</select>
 					<label>Page Limit</label>
-					<input type="text" id="page_limit" class="page_limit" />
+					<input type="text" id="page_limit" class="page_limit" placeholder="0" value ="0"; />
 				</div>
 				<div class='sep'></div>
 				<div class='div_table_teachers'>
@@ -270,7 +271,7 @@ $(function(){
 					</table>
 				</div>
 				<!-- END div_search_teachers -->
-				<div class='div_table_paginate pagination'>
+				<div id="pagination_displayer" class='div_table_paginate pagination'>
 					<span>« First</span>
 					<span class="active">1</span>
 					<a href="">2</a>

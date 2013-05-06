@@ -27,6 +27,7 @@ include "../DAO/func_admin.php";
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="../js-ui/jquery-ui-darkhive.js"></script>
 <script type="text/javascript" src="../js/current_date.js"></script>
+   <script type="text/javascript" src="js/load.js"></script>
 <script type="text/javascript">
 $(function(){
 	$(".box .h_title").not(this).next("ul").hide("normal");
@@ -70,7 +71,7 @@ $(function(){
 				<li class="upp"><a href="#">Teachers</a>
 					<ul>
 						<li>&#8250; <a href="">New Teacher</a></li>
-						<li>&#8250; <a href="">Manage Teachers</a></li>
+						<li>&#8250; <a href="" id="manage_teachers">Manage Teachers</a></li>
 					</ul>
 				</li>
 				<li class="upp"><a href="#">Staff</a>
