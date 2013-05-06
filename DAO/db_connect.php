@@ -2,10 +2,10 @@
   
   class db_connect{
   
-  		private $dbHost = 'mysql:host=localhost;';
+  		private $dbHost = 'mysql:host=student1.e2ps;';
   		private $dbName = 'dbname=mvs_sms_db';
-  		private $username = "root";
-  		private $password = "";
+  		private $username = "student1";
+  		private $password = "password";
   		protected $dbCon = null;
   		
   		function openCon(){

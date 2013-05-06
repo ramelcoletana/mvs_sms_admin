@@ -47,7 +47,7 @@ $(function(){
 		<div id="top">
 			<div class="left">
 				<div style="position: absolute; border: 0 none; width: 22px; height: 22px; ">
-					<img src=" <?php if(isset($pic)){ echo $pic; }else{ echo "img/avatar.gif";} ?>" 
+					<img src=" <?php if( isset($pic)){ echo $pic; }else{ echo "img/avatar.gif";} ?>"
 					style="width: 20px; height: 20px; border: 0 none; margin: 0 auto; border-radius: 2px;"/>
 				</div>
 				<p style="margin-left: 33px;">Welcome, <strong id='admin_name'>
