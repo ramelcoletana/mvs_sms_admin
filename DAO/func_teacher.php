@@ -236,10 +236,10 @@ include "db_connect.php";
                 if($profile_pic == "" || $profile_pic == null){
                     $profile_pic = "profile_pic_teachers/avatar.gif";
                 }
-                echo "<tr>";
-                echo "<td><input type=checkbox id='checkbox'.$row[0] /></td>";
+                echo "<tr id=tr_teacher".$row[0].">";
+                echo "<td><input type=checkbox id='checkbox'.$row[0].'/><input type='hidden' id='teacher_auto_id' value=".$row[0]." /></td>";
                 echo "<td><span class='table-icon edit' title='Edit' id='edit'.$row[0]></span></td>";
-                echo "<td><span class='table-icon delete' title='Delete' id='delete'.$row[0]></span></td>";
+                echo "<td><span class='table-icon delete' title='Delete' id='delete'.$row[0] onclick='delete_one_teacher(".$row[0].")'></span></td>";
                 echo "<td><img src='$profile_pic' style='width: 20px ;height: 20px;'/></td>";
                 echo "<td>".$row[2]."</td>";
                 echo "<td>".$row[3]."</td>";
@@ -250,7 +250,7 @@ include "db_connect.php";
             $this->closeCon();
         }
 
-        //PAGINATE FIRST PAGE
+        //PAGINATION TEACHERS
         function pagination_system($current_page, $input_search_val, $teacher_type, $page_limit){
             $this->openCon();
 
@@ -357,18 +357,48 @@ include "db_connect.php";
                 {
                     $pagination .= "<span class='disabled'>Next</span>";
                 }
-                $pagination .= "<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page ".$current_page." of ".$last_page."</span></span></div>";
+                $pagination .= "<span> &nbsp;&nbsp;&nbsp;&nbsp;Page ".$current_page." of ".$last_page."&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div>";
 
                 /*Note: there is a problem in paginating data
                  *
                  */
-            echo $pagination;
+            }else{
+                $pagination = "<div><span>Pagination is not available..</span></div>";
             }
 
-
+            //show pagination
+            echo $pagination;
 
             $this->closeCon();
 
+        }
+
+        //DELETE ON TEACHER
+        function delete_one_teacher($teach_auto_id){
+            $this->openCon();
+            //select teacher type
+            //if adviser unassign to their advisory class, unassign to subjects
+            //if subject teacher unassign to their subject class
+            //if sshool head teacher inactivate move to recent_head_teacher_table
+            $sql = "DELETE FROM t_teachers WHERE teach_auto_id = ? ";
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt -> bindParam(1,$teach_auto_id);
+            //$stmt->execute();
+
+            $this->closeCon();
+        }
+
+        //DELETE SEVERAL TEACHERS
+        function delete_several_teachers($dataArr){
+            $this->openCon();
+            for($ctr = 0; $ctr < count($dataArr); $ctr++){
+                $sql = "DELETE FROM t_teachers WHERE teach_auto_id = ? ";
+                $stmt = $this->dbCon->prepare($sql);
+                $stmt -> bindParam(1,$dataArr[$ctr]);
+                $stmt->execute();
+            }
+
+            $this->closeCon();
         }
 	}
 ?>

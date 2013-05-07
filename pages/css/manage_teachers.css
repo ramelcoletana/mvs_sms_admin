@@ -1,20 +1,28 @@
-::-webkit-input-placeholder { font-style: italic; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 5px 3px; }
+::-webkit-input-placeholder { font-style: italic; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 5px 3px; text-align: center; font-size: 10px; }
 :-moz-placeholder { /* Firefox 18- */
     font-style: italic;
     font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 5px 3px;
+    text-align: center;
+    font-size: 10px;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
     font-style: italic;
     font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 5px 3px;
+    text-align: center;
+    font-size: 10px;
 }
 :-ms-input-placeholder {
     font-style: italic;
     font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 5px 3px;
+    text-align: center;
+    font-size: 10px;
 }
 
 .m_teachers_content {}
-.div_search_teachers {border: 1px solid #000; margin-top: 10px; width: 93%; margin-left: 15px;}
-.div_search_teachers input[type='text'] { border: 1px solid #E0E0E0; padding: 5px 12px 7px 12px; }
-.div_search_teachers #input_search {  width: 120px;}
+.div_search_teachers {border: 0 none; margin-top: 10px; width: 93%; margin-left: 15px;}
+.div_search_teachers input[type='text'] { border: 1px solid #E0E0E0; padding: 4px 12px 7px 12px; }
+.div_search_teachers #input_search {  width: 120px; font-size: 12px; text-align: center; }
 .div_search_teachers .page_limit { width:30px; border: 1px solid #cccccc; text-align: center; color: #f07e01; }
 .div_search_teachers select { background: #FFFFFF; border: 1px solid #DDDDDD; border-radius: 3px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 5px 3px; }
+.check_all:hover { color: #F07E01 }
+.un_check_all:hover { color: #F07E01 }

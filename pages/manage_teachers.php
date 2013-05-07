@@ -192,7 +192,7 @@ $(function(){
 			<div class="full_w">
 			<div class='m_teachers_content'>
 				<div class='div_search_teachers'>
-					<input type='text' id='input_search' placeholder="Search input"/>
+					<input type='text' id='input_search' placeholder="Search input here"/>
 					<button class='btn_search' id='btn_search'>Go</button>
 					<label>Teacher type:</label>
 					<select id="teacher_type">
@@ -200,10 +200,11 @@ $(function(){
 						<option value="Adviser">Adviser</option>
 						<option value="Subject Teacher">Subject Teacher</option>
 					</select>
-					<label>Page Limit</label>
-					<input type="text" id="page_limit" class="page_limit" placeholder="0" value ="1"; />
+					<label>Row Limit</label>
+					<input type="text" id="page_limit" class="page_limit" placeholder="0" value ="5"; />
 				</div>
 				<div class='sep'></div>
+                <div id='tbl_teachers_warning'><p class='tbl_warning_msg'></p></div>
 				<div class='div_table_teachers'>
 					<table>
 						<thead>
@@ -218,10 +219,15 @@ $(function(){
 						<tbody id='tbdy_teachers' style="text-align: center;" >
 							<!-- content from database here.. -->
 						</tbody>
-						<tfoot style="text-align: center;">
+						<tfoot style="">
 							<tr>
-								<td colspan=4><span>Check All</span>&nbsp;Uncheck All</span></td>
-								<td colspan=3>1 Page out of 10</td>
+								<td colspan=5 style="text-align: center;">
+                                    <span id='check_all_teachers' class='check_all'>Check All</span>&nbsp;&nbsp;
+                                    <span id ='un_check_all_teachers' class='un_check_all'>Uncheck All</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span class='table-icon delete' title='Delete several' id='delete_several_teachers'></span>
+                                </td>
+                                <td></td>
+                                <td></td>
 							</tr>
 						</tfoot>
 					</table>
