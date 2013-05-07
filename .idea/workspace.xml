@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17f5dc60-47e4-447e-bf44-21b61cec793e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/process/pagination_system.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/func_teacher.php" afterPath="$PROJECT_DIR$/DAO/func_teacher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/js/manage_teachers.js" afterPath="$PROJECT_DIR$/pages/js/manage_teachers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/manage_teachers.php" afterPath="$PROJECT_DIR$/pages/manage_teachers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/process/view_teacher_first_page.php" afterPath="$PROJECT_DIR$/pages/process/view_teacher_first_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mvs_sms_admin.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367822925538" ignored="false" />
+    <file path="/Dummy.txt" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367887229144" ignored="false" />
     <file path="/index.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367802866767" ignored="false" />
     <file path="$PROJECT_DIR$/../greendough/index1.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367805649814" ignored="false" />
     <file path="$PROJECT_DIR$/../greendough/css/index1.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367805616006" ignored="false" />
@@ -64,7 +59,7 @@
       <file leaf-file-name="view_teachers_paginate.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/process/view_teachers_paginate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="45" selection-start="247" selection-end="247" vertical-scroll-proportion="-5.625">
+            <state line="9" column="45" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,11 +77,8 @@
       <file leaf-file-name="manage_teachers.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="78" selection-start="7787" selection-end="7787" vertical-scroll-proportion="0.5930807">
-              <folding>
-                <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="217" column="78" selection-start="7787" selection-end="7787" vertical-scroll-proportion="0.024752475">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +95,7 @@
       <file leaf-file-name="pagination_system.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="-8.75">
+            <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,11 +104,8 @@
       <file leaf-file-name="func_teacher.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="29" selection-start="9801" selection-end="9801" vertical-scroll-proportion="-10.833333">
-              <folding>
-                <marker date="1367833200779" expanded="true" signature="7174:7200" placeholder="..." />
-                <marker date="1367833200779" expanded="true" signature="8718:8744" placeholder="..." />
-              </folding>
+            <state line="269" column="29" selection-start="9801" selection-end="9801" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,7 +150,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="52" />
     <option name="width" value="1440" />
-    <option name="height" value="824" />
+    <option name="height" value="823" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -189,7 +178,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,54 +196,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvs_sms_admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvs_sms_admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvs_sms_admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvs_sms_admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="process" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvs_sms_admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvs_sms_admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,8 +207,8 @@
     <property name="options.lastSelected" value="appearance" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pagination" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -294,15 +237,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="52" width="1440" height="824" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="52" width="1440" height="823" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15755396" sideWeight="0.67238915" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15971223" sideWeight="0.67238915" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -311,6 +253,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -388,10 +331,7 @@
     <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="273" column="85" selection-start="10044" selection-end="10044" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -404,18 +344,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/process/view_teacher_first_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="32" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="185" column="0" selection-start="5813" selection-end="5813" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1367833200779" expanded="true" signature="7174:7200" placeholder="..." />
-            <marker date="1367833200779" expanded="true" signature="8718:8744" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -431,9 +366,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/db_connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="423" selection-end="423" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
+        <state line="18" column="32" selection-start="423" selection-end="423" vertical-scroll-proportion="-11.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/js/new_teacher.js">
@@ -450,9 +383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/process/view_teacher_first_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="247" selection-end="247" vertical-scroll-proportion="0.09677419">
-          <folding />
-        </state>
+        <state line="10" column="43" selection-start="247" selection-end="247" vertical-scroll-proportion="0.09677419" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/css/manage_teachers.css">
@@ -464,14 +395,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/process/view_teachers_paginate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="45" selection-start="247" selection-end="247" vertical-scroll-proportion="-5.625">
+        <state line="9" column="45" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="-8.75">
+        <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -485,21 +416,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="29" selection-start="9801" selection-end="9801" vertical-scroll-proportion="-10.833333">
-          <folding>
-            <marker date="1367833200779" expanded="true" signature="7174:7200" placeholder="..." />
-            <marker date="1367833200779" expanded="true" signature="8718:8744" placeholder="..." />
-          </folding>
+        <state line="269" column="29" selection-start="9801" selection-end="9801" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="78" selection-start="7787" selection-end="7787" vertical-scroll-proportion="0.5930807">
-          <folding>
-            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="217" column="78" selection-start="7787" selection-end="7787" vertical-scroll-proportion="0.024752475">
+          <folding />
         </state>
       </provider>
     </entry>
