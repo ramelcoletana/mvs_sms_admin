@@ -222,7 +222,6 @@ include "db_connect.php";
         function view_teachers_paginate($search_input_val, $teacher_type, $page_limit, $page){
             $this->openCon();
             $current_page = $page;
-            echo $current_page;
             $start_page = ($current_page - 1 ) * $page_limit;
 
             $sql = "SELECT teach_auto_id, profile_pic, teacher_id, fullname, teacher_type FROM t_teachers
@@ -230,7 +229,7 @@ include "db_connect.php";
                     OR fullname LIKE '$search_input_val')  LIMIT $start_page , $page_limit ";
             $stmt = $this->dbCon->prepare($sql);
             $stmt->execute();
-            $profile_pic = "";
+            $notNull = "";
             while($row = $stmt->fetch()){
                 $profile_pic = $row[1];
                 if($profile_pic == "" || $profile_pic == null){
@@ -244,6 +243,13 @@ include "db_connect.php";
                 echo "<td>".$row[2]."</td>";
                 echo "<td>".$row[3]."</td>";
                 echo "<td>".$row[4]."</td>";
+                echo "</tr>";
+
+                $notNull = true;
+            }
+            if(!$notNull){
+                echo "<tr>";
+                echo "<td style='color: red;' colspan =7>0 result found for ".trim($search_input_val,"%")."<input type=hidden id='no_data_found_t' value='no_data'/></td>";
                 echo "</tr>";
             }
 
@@ -357,13 +363,13 @@ include "db_connect.php";
                 {
                     $pagination .= "<span class='disabled'>Next</span>";
                 }
-                $pagination .= "<span> &nbsp;&nbsp;&nbsp;&nbsp;Page ".$current_page." of ".$last_page."&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div>";
+                $pagination .= "<span> &nbsp;&nbsp;&nbsp;&nbsp;Page ".$current_page." of ".$last_page."&nbsp;&nbsp;&nbsp;&nbsp;</span></div>";
 
                 /*Note: there is a problem in paginating data
                  *
                  */
             }else{
-                $pagination = "<div><span>Pagination is not available..</span></div>";
+                $pagination = "<div><span class='disabled'>Prev</span><span class='disabled'>...</span><span class='disabled'>Next</span></div>";
             }
 
             //show pagination

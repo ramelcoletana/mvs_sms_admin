@@ -3,7 +3,7 @@ session_start();
 include "../DAO/func_admin.php";
 
 	if(!isset($_SESSION['admin_username']) && !isset($_SESSION['admin_password'])){
-		header("location: login.php");
+		header("location: ../login.php");
 	}else{
 		$name = new func_admin();
 		$n = $name->get_admin_name($_SESSION['admin_username'],$_SESSION['admin_password']);

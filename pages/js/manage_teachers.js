@@ -7,12 +7,9 @@
  */
 $(function(){
 
-    //page limit
-    $('#page_limit').keyup(function(){
-        pageLimitKeyup();
-    });
-    $('#page_limit').blur(function(){
-        pageLimitBlur();
+    //records per page
+    $('#page_limit').change(function(){
+       pagination_system(1);
     });
 
     //pagination
@@ -28,18 +25,25 @@ $(function(){
 
     //check and uncheck checkboxes
     $('#tbdy_teachers').on('click','tr', function(){
-        var tr_id = this.id;
-        var cell = document.getElementById(tr_id).getElementsByTagName('td');
-        var checkbox = cell[0].getElementsByTagName('input')[0];
-        if(checkbox.checked == true){
-            checkbox.checked = false;
+        var check = $('#no_data_found_t').val();
+        if(check == "no_data"){
+            $('#tbl_teachers_warning').addClass('n_warning');
+            $('.tbl_warning_msg').html("No data found.");
         }else{
-            checkbox.checked = true;
+            $('#tbl_teachers_warning').removeClass('n_warning');
+            $('.tbl_warning_msg').html("");
+            var tr_id = this.id;
+            var cell = document.getElementById(tr_id).getElementsByTagName('td');
+            var checkbox = cell[0].getElementsByTagName('input')[0];
+            if(checkbox.checked == true){
+                checkbox.checked = false;
+            }else{
+                checkbox.checked = true;
+            }
         }
-
     });
+
     $("#tbdy_teachers").on('click','input[type=checkbox]', function(){
-        console.log(this.id);
         var checkbox = input[type=checkbox];
         if(checkbox.checked == false){
             checkbox.checked = true;
@@ -86,37 +90,6 @@ $(function(){
 
 /*F U N  C T I O N S*/
 
-//PAGE LIMIT
-function pageLimitKeyup(){
-    var pageLimit = $('#page_limit').val();
-    var regex = /^[0-9]$/;
-    var pL = pageLimit.length;
-    var maxP = 5;
-    var maxL = 1;
-    if(!regex.test(pageLimit)){
-        var res = pageLimit.substring(0,pL-1);
-        $('#page_limit').val(res);
-    }
-    if(pL > maxL ){
-        var res = 1;
-        $('#page_limit').val(res);
-    }
-    if(pageLimit > 5){
-        var res = 5;
-        $('#page_limit').val(res);
-    }
-
-
-}
-function pageLimitBlur(){
-    var pageLimit = $('#page_limit').val();
-    if(pageLimit === "" || pageLimit === NaN || pageLimit === null){
-       var res = 5;
-        $('#page_limit').val(res);
-    }
-
-}
-
 function view_teachers_paginate(page){
     var searchInput = $('#input_search').val();
     var teacher_type = $('#teacher_type').val();
@@ -128,7 +101,6 @@ function view_teachers_paginate(page){
         data: obj,
         success: function(response){
             $('#tbdy_teachers').html(response);
-            //console.log(response);
         },
         error: function(response){
             console.log("error in viewing first page - "+JSON.stringify(response));
@@ -188,39 +160,48 @@ function delete_one_teacher(id){
 
 //delete several teachers
 function delete_several_teachers(){
-    var tbdy = document.getElementById('tbdy_teachers');
-    var tr = tbdy.getElementsByTagName('tr');
-    var dataArr = new Array();
-    for(var ctr = 0; ctr < tr.length; ctr++){
-        var td = tr[ctr].getElementsByTagName('td')[0];
-        var checkbox = td.getElementsByTagName('input')[0];
-        if(checkbox.checked == true){
-            var td2 = tr[ctr].getElementsByTagName('input');
-            var teacher_id = td2[1].value;
-            dataArr.push(teacher_id);
-        }
-    }
-    if(dataArr.length < 1){
+    var check = $('#no_data_found_t').val();
+    if(check == "no_data"){
         $('#tbl_teachers_warning').addClass('n_warning');
-        $('.tbl_warning_msg').html("No rows selected.");
+        $('.tbl_warning_msg').html("No data to be deleted.");
     }else{
-        var c = confirm("Deleting teachers...\n\nContinue anyway?");
-        if(c){
-            $('#tbl_teachers_warning').removeClass('n_warning');
-            $('.tbl_warning_msg').html("");
-            var obj = { "dataArr" : dataArr };
-            $.ajax({
-                type: 'POST',
-                url: 'process/delete_several_teachers.php',
-                data: obj,
-                success: function(response){
-                    console.log(response);
-                    view_teachers_paginate(1);
-                },
-                error: function(response){
-                    console.log("error in deleting several teachers -- "+JSON.stringify(response));
-                }
-            });
+        $('#tbl_teachers_warning').removeClass('n_warning');
+        $('.tbl_warning_msg').html("");
+        var tbdy = document.getElementById('tbdy_teachers');
+        var tr = tbdy.getElementsByTagName('tr');
+        var dataArr = new Array();
+        for(var ctr = 0; ctr < tr.length; ctr++){
+            var td = tr[ctr].getElementsByTagName('td')[0];
+            var checkbox = td.getElementsByTagName('input')[0];
+            if(checkbox.checked == true){
+                var td2 = tr[ctr].getElementsByTagName('input');
+                var teacher_id = td2[1].value;
+                dataArr.push(teacher_id);
+            }
+        }
+        if(dataArr.length < 1){
+            $('#tbl_teachers_warning').addClass('n_warning');
+            $('.tbl_warning_msg').html("No rows selected.");
+        }else{
+            var c = confirm("Deleting teachers...\n\nContinue anyway?");
+            if(c){
+                $('#tbl_teachers_warning').removeClass('n_warning');
+                $('.tbl_warning_msg').html("");
+                var obj = { "dataArr" : dataArr };
+                $.ajax({
+                    type: 'POST',
+                    url: 'process/delete_several_teachers.php',
+                    data: obj,
+                    success: function(response){
+                        console.log(response);
+                        view_teachers_paginate(1);
+                    },
+                    error: function(response){
+                        console.log("error in deleting several teachers -- "+JSON.stringify(response));
+                    }
+                });
+            }
         }
     }
+
 }

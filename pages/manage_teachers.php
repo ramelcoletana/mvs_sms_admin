@@ -3,7 +3,7 @@ session_start();
 include "../DAO/func_admin.php";
 
 	if(!isset($_SESSION['admin_username']) && !isset($_SESSION['admin_password'])){
-		header("location: login.php");
+		header("location: ../login.php");
 	}else{
 		$name = new func_admin();
 		$n = $name->get_admin_name($_SESSION['admin_username'],$_SESSION['admin_password']);
@@ -200,8 +200,12 @@ $(function(){
 						<option value="Adviser">Adviser</option>
 						<option value="Subject Teacher">Subject Teacher</option>
 					</select>
-					<label>Row Limit</label>
-					<input type="text" id="page_limit" class="page_limit" placeholder="0" value ="5"; />
+					<select id="page_limit" class="page_limit">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                    </select>
+                    <label>records per page</label>
 				</div>
 				<div class='sep'></div>
                 <div id='tbl_teachers_warning'><p class='tbl_warning_msg'></p></div>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/DAO/func_teacher.php" line="253" />
+    <bookmark url="file://$PROJECT_DIR$/DAO/func_teacher.php" line="259" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17f5dc60-47e4-447e-bf44-21b61cec793e" name="Default" comment="">
@@ -9,6 +9,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/css/manage_teachers.css" afterPath="$PROJECT_DIR$/pages/css/manage_teachers.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/js/manage_teachers.js" afterPath="$PROJECT_DIR$/pages/js/manage_teachers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/manage_teachers.php" afterPath="$PROJECT_DIR$/pages/manage_teachers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/template.php" afterPath="$PROJECT_DIR$/pages/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mvs_sms_admin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,13 +22,13 @@
     <file path="/load.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367807593309" ignored="false" />
     <file path="/template.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367807575291" ignored="false" />
     <file path="/manage.html" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367807793684" ignored="false" />
-    <file path="/manage_teachers.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367888889826" ignored="false" />
-    <file path="/manage_teachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367894737215" ignored="false" />
-    <file path="/manage_teachers.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367900868945" ignored="false" />
+    <file path="/manage_teachers.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367909501672" ignored="false" />
+    <file path="/manage_teachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367909440514" ignored="false" />
+    <file path="/manage_teachers.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367909848836" ignored="false" />
     <file path="$PROJECT_DIR$/../pagination/js/vpb_pagination.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367812939556" ignored="false" />
     <file path="/vpb_pagination.js" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367812621849" ignored="false" />
     <file path="/viewTeachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367813804254" ignored="false" />
-    <file path="/func_teacher.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367899448779" ignored="false" />
+    <file path="/func_teacher.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367908091103" ignored="false" />
     <file path="/paginate.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367825257218" ignored="false" />
     <file path="/pagination_first_page.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367827115661" ignored="false" />
     <file path="$PROJECT_DIR$/../pagination/content_displayer.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367827450581" ignored="false" />
@@ -37,6 +39,9 @@
     <file path="/index.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367891740290" ignored="false" />
     <file path="/delete_several_teachers.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367895492148" ignored="false" />
     <file path="/delete_one_teacher.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367899291131" ignored="false" />
+    <file path="$PROJECT_DIR$/../greendough/kpo.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367904983754" ignored="false" />
+    <file path="/kpo.php" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367904945249" ignored="false" />
+    <file path="$PROJECT_DIR$/../greendough/css/kpo.css" changelist="17f5dc60-47e4-447e-bf44-21b61cec793e" time="1367905036089" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,16 +64,7 @@
       <file leaf-file-name="manage_teachers.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/css/manage_teachers.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="36" selection-start="1358" selection-end="1365" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_teachers_paginate.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/process/view_teachers_paginate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="349" selection-end="349" vertical-scroll-proportion="-7.5">
+            <state line="24" column="42" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,7 +73,7 @@
       <file leaf-file-name="manage_teachers.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="46" selection-start="7534" selection-end="7534" vertical-scroll-proportion="-10.875">
+            <state line="202" column="42" selection-start="7349" selection-end="7359" vertical-scroll-proportion="-15.625">
               <folding>
                 <element signature="n#style#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#tfoot#0;n#table#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,20 +82,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template.php">
+      <file leaf-file-name="new_teacher.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/new_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="145" selection-start="9170" selection-end="9299" vertical-scroll-proportion="-11.958333">
+            <state line="5" column="41" selection-start="173" selection-end="173" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_teachers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="manage_teachers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/js/manage_teachers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="38" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.65007776">
+            <state line="11" column="28" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_teacher.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/js/new_teacher.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="35" selection-start="2474" selection-end="2474" vertical-scroll-proportion="-7.3017106">
+              <folding>
+                <marker date="1367821403671" expanded="false" signature="14030:14061" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,12 +129,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_teacher.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/js/new_teacher.js">
+      <file leaf-file-name="func_teacher.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="35" selection-start="2474" selection-end="2474" vertical-scroll-proportion="-4.107143">
+            <state line="365" column="127" selection-start="15425" selection-end="15425" vertical-scroll-proportion="-11.875">
               <folding>
-                <marker date="1367821403671" expanded="false" signature="14030:14061" placeholder="..." />
+                <marker date="1367910070125" expanded="false" signature="7174:7200" placeholder="..." />
+                <marker date="1367910070125" expanded="false" signature="8812:8838" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -136,21 +144,8 @@
       <file leaf-file-name="pagination_system.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="-8.75">
+            <state line="14" column="85" selection-start="466" selection-end="466" vertical-scroll-proportion="-8.75">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="func_teacher.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="239" column="70" selection-start="8467" selection-end="8467" vertical-scroll-proportion="-7.75">
-              <folding>
-                <marker date="1367900919468" expanded="false" signature="7174:7200" placeholder="..." />
-                <marker date="1367900919468" expanded="true" signature="8848:8874" placeholder="..." />
-                <marker date="1367900919468" expanded="true" signature="10001:10137" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -173,22 +168,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/js/load.js" />
         <option value="$PROJECT_DIR$/pages/manage.html" />
-        <option value="$PROJECT_DIR$/pages/template.php" />
         <option value="$PROJECT_DIR$/pages/process/viewTeachers.php" />
         <option value="$PROJECT_DIR$/pages/js/new_teacher.js" />
         <option value="$PROJECT_DIR$/pages/process/view_teacher_first_page.php" />
         <option value="$PROJECT_DIR$/pages/process/paginate.php" />
         <option value="$PROJECT_DIR$/pages/process/pagination_first_page.php" />
         <option value="$PROJECT_DIR$/pages/process/view_teachers_paginate.php" />
-        <option value="$PROJECT_DIR$/pages/css/manage_teachers.css" />
-        <option value="$PROJECT_DIR$/pages/manage_teachers.php" />
         <option value="$PROJECT_DIR$/pages/process/delete_several_teachers.php" />
         <option value="$PROJECT_DIR$/pages/process/delete_one_teacher.php" />
-        <option value="$PROJECT_DIR$/DAO/func_teacher.php" />
+        <option value="$PROJECT_DIR$/template.php" />
+        <option value="$PROJECT_DIR$/pages/template.php" />
+        <option value="$PROJECT_DIR$/pages/manage_teachers.php" />
+        <option value="$PROJECT_DIR$/pages/css/manage_teachers.css" />
         <option value="$PROJECT_DIR$/pages/js/manage_teachers.js" />
+        <option value="$PROJECT_DIR$/DAO/func_teacher.php" />
       </list>
     </option>
   </component>
@@ -270,7 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="process" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -400,22 +395,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="0" selection-start="5813" selection-end="5813" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1367900919468" expanded="false" signature="7174:7200" placeholder="..." />
-            <marker date="1367900919468" expanded="true" signature="8848:8874" placeholder="..." />
-            <marker date="1367900919468" expanded="true" signature="10001:10137" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="0" selection-start="6686" selection-end="6686" vertical-scroll-proportion="0.39906102" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="93" selection-start="595" selection-end="595" vertical-scroll-proportion="-4.1408453" />
@@ -440,22 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/js/new_teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="35" selection-start="2474" selection-end="2474" vertical-scroll-proportion="-4.107143">
-          <folding>
-            <marker date="1367821403671" expanded="false" signature="14030:14061" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="83" selection-start="464" selection-end="464" vertical-scroll-proportion="-8.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/process/view_teachers_paginate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="23" selection-start="349" selection-end="349" vertical-scroll-proportion="-7.5">
@@ -463,9 +426,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/process/delete_one_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="46" selection-start="283" selection-end="317" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="145" selection-start="9170" selection-end="9299" vertical-scroll-proportion="-11.958333">
+        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="41" selection-start="173" selection-end="173" vertical-scroll-proportion="0.12376238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/new_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="41" selection-start="173" selection-end="173" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/process/pagination_system.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="85" selection-start="466" selection-end="466" vertical-scroll-proportion="-8.75">
           <folding />
         </state>
       </provider>
@@ -477,9 +468,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/css/manage_teachers.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="42" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/manage_teachers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="46" selection-start="7534" selection-end="7534" vertical-scroll-proportion="-10.875">
+        <state line="202" column="42" selection-start="7349" selection-end="7359" vertical-scroll-proportion="-15.625">
           <folding>
             <element signature="n#style#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#tfoot#0;n#table#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -487,35 +485,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/process/delete_one_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="283" selection-end="317" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/css/manage_teachers.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="1358" selection-end="1365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/func_teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="70" selection-start="8467" selection-end="8467" vertical-scroll-proportion="-7.75">
+        <state line="365" column="127" selection-start="15425" selection-end="15425" vertical-scroll-proportion="-11.875">
           <folding>
-            <marker date="1367900919468" expanded="false" signature="7174:7200" placeholder="..." />
-            <marker date="1367900919468" expanded="true" signature="8848:8874" placeholder="..." />
-            <marker date="1367900919468" expanded="true" signature="10001:10137" placeholder="..." />
+            <marker date="1367910070125" expanded="false" signature="7174:7200" placeholder="..." />
+            <marker date="1367910070125" expanded="false" signature="8812:8838" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/js/manage_teachers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="38" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.65007776">
+        <state line="11" column="28" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/js/new_teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="35" selection-start="2474" selection-end="2474" vertical-scroll-proportion="-7.3017106">
+          <folding>
+            <marker date="1367821403671" expanded="false" signature="14030:14061" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
