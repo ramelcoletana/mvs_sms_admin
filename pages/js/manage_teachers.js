@@ -23,6 +23,10 @@ $(function(){
         pagination_system(1);
     });
 
+    $('#teacher_type').change(function(){
+       pagination_system(1);
+    });
+
     //check and uncheck checkboxes
     $('#tbdy_teachers').on('click','tr', function(){
         var check = $('#no_data_found_t').val();
@@ -203,5 +207,7 @@ function delete_several_teachers(){
             }
         }
     }
-
 }
+/*Note: add school year for teachers
+ *
+ */
