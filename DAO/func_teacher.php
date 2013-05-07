@@ -14,7 +14,7 @@ include "db_connect.php";
 				$this->closeCon();
 		}
 		
-		function save_new_sch_head($idNum,$fullName,$address,$email,$mobile,$age,$gender,$bDate,$rank,$profilePic){
+		function save_new_sch_head($idNum,$fName,$mName,$lName,$address,$email,$mobile,$age,$gender,$bDate,$rank,$profilePic){
 			$this->openCon();
 			$teacherType = "School Head";
 			$status = "active";
@@ -25,21 +25,23 @@ include "db_connect.php";
 			//
 			//
 
-			$sql = "INSERT INTO t_teachers (teacher_id,fullname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic,status) 
-			VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+			$sql = "INSERT INTO t_teachers (teacher_id,first_name,middle_name,last_name,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic,status)
+			VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			$stmt = $this->dbCon->prepare($sql);
 			$stmt->bindParam(1,$idNum);
-			$stmt->bindParam(2,$fullName);
-			$stmt->bindParam(3,$address);
-			$stmt->bindParam(4,$email);
-			$stmt->bindParam(5,$mobile);
-			$stmt->bindParam(6,$age);
-			$stmt->bindParam(7,$gender);
-			$stmt->bindParam(8,$bDate);
-			$stmt->bindParam(9,$rank);
-			$stmt->bindParam(10,$teacherType);
-			$stmt->bindParam(11,$profilePic);
-			$stmt->bindParam(12,$status);
+			$stmt->bindParam(2,$fName);
+            $stmt->bindParam(3,$mName);
+            $stmt->bindParam(4,$lName);
+			$stmt->bindParam(5,$address);
+			$stmt->bindParam(6,$email);
+			$stmt->bindParam(7,$mobile);
+			$stmt->bindParam(8,$age);
+			$stmt->bindParam(9,$gender);
+			$stmt->bindParam(10,$bDate);
+			$stmt->bindParam(11,$rank);
+			$stmt->bindParam(12,$teacherType);
+			$stmt->bindParam(13,$profilePic);
+			$stmt->bindParam(14,$status);
 			$stmt->execute();
 			//close connection
 			$this->closeCon();
@@ -89,27 +91,28 @@ include "db_connect.php";
 				}
 
 			if(!$exist){
-				$sql = "INSERT INTO t_teachers (teacher_id,fullname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
-				 VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+				$sql = "INSERT INTO t_teachers (teacher_id,first_name,middle_name,last_name,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
+				 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 				foreach($decoded1 as $info1){
 					$$info1['name'] = $info1['value'];
 				}
 				foreach($decoded2 as $info2){
 					$$info2['name'] = $info2['value'];
 				}
-				$fullname = $fName." ".$mName." ".$lName;
 				 $stmt2 = $this->dbCon->prepare($sql);
 				 $stmt2->bindParam(1,$idNum);
-				 $stmt2->bindParam(2,$fullname);
-				 $stmt2->bindParam(3,$address);
-				 $stmt2->bindParam(4,$email);
-				 $stmt2->bindParam(5,$mobile);
-				 $stmt2->bindParam(6,$age);
-				 $stmt2->bindParam(7,$gender);
-				 $stmt2->bindParam(8,$bDate);
-				 $stmt2->bindParam(9,$rank);
-				 $stmt2->bindParam(10,$teacherType);
-				 $stmt2->bindParam(11,$profilePic);
+				 $stmt2->bindParam(2,$fName);
+                 $stmt2->bindParam(3,$mName);
+                 $stmt2->bindParam(4,$lName);
+				 $stmt2->bindParam(5,$address);
+				 $stmt2->bindParam(6,$email);
+				 $stmt2->bindParam(7,$mobile);
+				 $stmt2->bindParam(8,$age);
+				 $stmt2->bindParam(9,$gender);
+				 $stmt2->bindParam(10,$bDate);
+				 $stmt2->bindParam(11,$rank);
+				 $stmt2->bindParam(12,$teacherType);
+				 $stmt2->bindParam(13,$profilePic);
 				 $stmt2->execute();
 				 
 				 $sql = "UPDATE t_year_sections SET avi_status = 0 WHERE year_sec_id = ?";
@@ -124,15 +127,14 @@ include "db_connect.php";
                  $row = $stmt->fetch();
                  $teach_auto_id = $row[0];
 
-				 $sql = "INSERT INTO t_year_sections_assigned (year_sec_id, teach_auto_id, teacher_fullname, year_level, section_name, year_sec_code)
-						VALUES (?,?,?,?,?,?)";
+				 $sql = "INSERT INTO t_year_sections_assigned (year_sec_id, teach_auto_id, year_level, section_name, year_sec_code)
+						VALUES (?,?,?,?,?)";
 				 $stmt = $this->dbCon->prepare($sql);
 				 $stmt->bindParam(1,$ySecId);
 				 $stmt->bindParam(2,$teach_auto_id);
-				 $stmt->bindParam(3,$fullname);
-				 $stmt->bindParam(4,$ySecYLevel);
-				 $stmt->bindParam(5,$ySecSName);
-				 $stmt->bindParam(6,$ySecCode);
+				 $stmt->bindParam(3,$ySecYLevel);
+				 $stmt->bindParam(4,$ySecSName);
+				 $stmt->bindParam(5,$ySecCode);
 				 $stmt->execute();
 
 			}else{
@@ -165,21 +167,22 @@ include "db_connect.php";
 				foreach($decoded as $info){
 						array_push($arrData, $info['value']);
 				}
-				$fullname = $arrData[1]." ".$arrData[2]." ".$arrData[3];
-				$sql = "INSERT INTO t_teachers (teacher_id,fullname,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
-				 VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+				$sql = "INSERT INTO t_teachers (teacher_id,first_name,middle_name,last_name,address,email,mobile,age,gender,bdate,rank,teacher_type,profile_pic)
+				 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 				$stmt = $this->dbCon->prepare($sql);
 				$stmt->bindParam(1,$arrData[0]);
-				$stmt->bindParam(2,$fullname);
-				$stmt->bindParam(3,$arrData[4]);
-				$stmt->bindParam(4,$arrData[5]);
-				$stmt->bindParam(5,$arrData[6]);
-				$stmt->bindParam(6,$arrData[7]);
-				$stmt->bindParam(7,$arrData[8]);
-				$stmt->bindParam(8,$arrData[9]);
-				$stmt->bindParam(9,$arrData[10]);
-				$stmt->bindParam(10,$arrData[11]);
-				$stmt->bindParam(11,$arrData[12]);
+                $stmt->bindParam(2,$arrData[1]);
+                $stmt->bindParam(3,$arrData[2]);
+                $stmt->bindParam(4,$arrData[3]);
+				$stmt->bindParam(5,$arrData[4]);
+				$stmt->bindParam(6,$arrData[5]);
+				$stmt->bindParam(7,$arrData[6]);
+				$stmt->bindParam(8,$arrData[7]);
+				$stmt->bindParam(9,$arrData[8]);
+				$stmt->bindParam(10,$arrData[9]);
+				$stmt->bindParam(11,$arrData[10]);
+				$stmt->bindParam(12,$arrData[11]);
+				$stmt->bindParam(13,$arrData[12]);
 				$stmt->execute();
 				
 				$this->closeCon();
@@ -224,9 +227,11 @@ include "db_connect.php";
             $current_page = $page;
             $start_page = ($current_page - 1 ) * $page_limit;
 
-            $sql = "SELECT teach_auto_id, profile_pic, teacher_id, fullname, teacher_type FROM t_teachers
-                    WHERE teacher_type = '$teacher_type' AND (teacher_id LIKE '$search_input_val'
-                    OR fullname LIKE '$search_input_val')  LIMIT $start_page , $page_limit ";
+            $sql = "SELECT teach_auto_id, profile_pic, teacher_id, first_name,middle_name,last_name, teacher_type FROM t_teachers
+                    WHERE (teacher_id LIKE '$search_input_val'
+                    OR first_name LIKE '$search_input_val' OR middle_name = '$search_input_val' OR last_name = '$search_input_val')
+                    AND teacher_type = '$teacher_type'
+                    LIMIT $start_page , $page_limit ";
             $stmt = $this->dbCon->prepare($sql);
             $stmt->execute();
             $notNull = "";
@@ -235,14 +240,15 @@ include "db_connect.php";
                 if($profile_pic == "" || $profile_pic == null){
                     $profile_pic = "profile_pic_teachers/avatar.gif";
                 }
+                $full_name = $row[3]." ".$row[4]." ".$row[5];
                 echo "<tr id=tr_teacher".$row[0].">";
                 echo "<td><input type=checkbox id='checkbox'.$row[0].'/><input type='hidden' id='teacher_auto_id' value=".$row[0]." /></td>";
                 echo "<td><span class='table-icon edit' title='Edit' id='edit'.$row[0]></span></td>";
                 echo "<td><span class='table-icon delete' title='Delete' id='delete'.$row[0] onclick='delete_one_teacher(".$row[0].")'></span></td>";
                 echo "<td><img src='$profile_pic' style='width: 20px ;height: 20px;'/></td>";
                 echo "<td>".$row[2]."</td>";
-                echo "<td>".$row[3]."</td>";
-                echo "<td>".$row[4]."</td>";
+                echo "<td>".$full_name."</td>";
+                echo "<td>".$row[6]."</td>";
                 echo "</tr>";
 
                 $notNull = true;
@@ -260,7 +266,8 @@ include "db_connect.php";
         function pagination_system($current_page, $input_search_val, $teacher_type, $page_limit){
             $this->openCon();
 
-            $sql = "SELECT COUNT(*) FROM t_teachers WHERE (teacher_id LIKE '$input_search_val' OR fullname LIKE '$input_search_val') AND teacher_type = ? ";
+            $sql = "SELECT COUNT(*) FROM t_teachers WHERE (teacher_id LIKE '$$search_input_val'
+                    OR first_name LIKE '$search_input_val' OR middle_name = '$search_input_val' OR last_name = '$search_input_val') AND teacher_type = ? ";
             $stmt = $this->dbCon->prepare($sql);
             $stmt->bindParam(1,$teacher_type);
             $stmt->execute();

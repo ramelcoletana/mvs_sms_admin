@@ -442,9 +442,6 @@ function saveNewHeadTeacher(){
 	var age = $('#new_sch_head_age').val();
 	var gender = $('#new_sch_head_gender').val();
 	var bDate = $('#new_sch_head_bdate').val();
-	var rank = $('#new_sch_head_rank').val();
-	var profilePic = "profile_pic_teachers/avatar.gif";
-	var fullName = fName+" "+mName+" "+lName;
 	var checkEm = valEmailSchH();
 
 	//validate email address
