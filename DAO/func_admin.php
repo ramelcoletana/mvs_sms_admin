@@ -46,6 +46,16 @@ include "db_connect.php";
             $this->openCon();
         }
 
+        //GET SCHOOL YEAR
+        function get_school_year(){
+            $this->openCon();
+            $sql = "SELECT sch_year FROM t_school_year";
+            $stmt = $this->dbCon->query($sql);
+            $row = $stmt->fetch();
+            return $row[0];
+            $this->closeCon();
+        }
+
         //GET ADMINISTRATOR'S NAME
         function get_admin_name($admin_username,$admin_password){
             $this->openCon();

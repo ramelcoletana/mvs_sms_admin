@@ -61,7 +61,15 @@ $(function(){
 							$d = $date->get_date_last_login($_SESSION['admin_username'],$_SESSION['admin_password']);
 							echo $d;
 						?>
-					</strong></p>
+					</strong>&nbsp;&nbsp;
+                    S.Y.:<strong class='school_year'>
+                            <?php
+                                $sy = new func_admin();
+                                $s = $sy->get_school_year();
+                            echo $s;
+                            ?>
+                         </strong>
+                    </p>
 				</div>
 			</div>
 		</div>

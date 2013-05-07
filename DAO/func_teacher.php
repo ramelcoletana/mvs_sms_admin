@@ -393,6 +393,23 @@ include "db_connect.php";
             //if adviser unassign to their advisory class, unassign to subjects
             //if subject teacher unassign to their subject class
             //if sshool head teacher inactivate move to recent_head_teacher_table
+
+            /*$sql = "SELECT tc.teacher_type, ysa.teach_auto_id,ys.year_sec_id FROM t_teachers AS tc, t_year_sections AS ys, t_year_sections_assigned AS ysa
+            WHERE tc.teach_auto_id = '$teach_auto_id' AND tc.teach_auto_id = ysa.teach_auto_id AND ysa.year_sec_id = ys.year_sec_id";*/
+            $sql = "SELECT teacher_type FROM t_teachers WHERE teach_auto_id = ?";
+            $stmt = $this->dbCon->prepare($sql);
+            $stmt->bindParam(1,$teach_auto_id);
+            $stmt->execute();
+            $row = $stmt->fetch();
+            $teacher_type = $row[0];
+            if($teacher_type === "School Head"){
+
+            }elseif($teacher_type === "Adviser"){
+
+            }else{
+
+            }
+
             $sql = "DELETE FROM t_teachers WHERE teach_auto_id = ? ";
             $stmt = $this->dbCon->prepare($sql);
             $stmt -> bindParam(1,$teach_auto_id);

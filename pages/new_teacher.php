@@ -58,13 +58,21 @@ $(function(){
 			</div>
 			<div class="right">
 				<div class="align-right">
-					<p>Last login: <strong class="date_time_last_login">
-						<?php
-							$date = new func_admin();
-							$d = $date->get_date_last_login($_SESSION['admin_username'],$_SESSION['admin_password']);
-							echo $d;
-						?>
-					</strong></p>
+                    <p>Last login: <strong class="date_time_last_login">
+                            <?php
+                            $date = new func_admin();
+                            $d = $date->get_date_last_login($_SESSION['admin_username'],$_SESSION['admin_password']);
+                            echo $d;
+                            ?>
+                        </strong>&nbsp;&nbsp;
+                        S.Y.:<strong class='school_year'>
+                            <?php
+                            $sy = new func_admin();
+                            $s = $sy->get_school_year();
+                            echo $s;
+                            ?>
+                        </strong>
+                    </p>
 				</div>
 			</div>
 		</div>
